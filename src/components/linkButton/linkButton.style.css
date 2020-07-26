@@ -1,0 +1,33 @@
+.linkButton{
+    text-decoration: none;
+    display:inline-block;
+    color: white;
+    width:120px;
+    padding: 12px 5px;
+    font-family: sans-serif;
+}
+
+.primary{
+    background-color: #058f58;
+}
+
+.primary:hover{
+    background-color: #048350;
+}
+
+.secondary{
+    background-color: #03849C;
+}
+
+.secondary:hover{
+    background-color: #036e81;
+}
+
+.link{
+    background-color: #03A693;
+}
+
+.link:hover{
+    background-color: #039b89;
+}
+
