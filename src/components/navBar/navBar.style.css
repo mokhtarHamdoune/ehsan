@@ -5,7 +5,7 @@ nav{
     background-color: #333;
     top:0;
     padding: 4px 10px;
-    margin-bottom: 25px;
+    z-index: 2;
 }
 nav .menu-header .logo{
     color:#058f58;
