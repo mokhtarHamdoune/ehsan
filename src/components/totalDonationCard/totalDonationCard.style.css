@@ -1,0 +1,33 @@
+.totalDonationCard{
+    /* box-sizing: border-box; */
+    min-width: 290px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 6px 3px rgb(250, 246, 246);
+    background-color: rgba(255, 255, 255, 0.7);
+}
+.totalDonationCard .total-donation-title{
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #03A693;
+}
+.totalDonationCard .total-donation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100px;
+    height:100px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #03A693;
+}
+.totalDonationCard .total-donation h3{
+    color: #03A693;
+    /* border: 1px solid red; */
+}
