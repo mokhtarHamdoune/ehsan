@@ -1,15 +1,17 @@
 .carousels{
+    border-top: 5px solid #f1f1f1;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 10px;
 }
 .total-donations-container{
+    border-top: 5px solid #f1f1f1;
     padding:25px 10px;
     background-image: url('../../images/scott-web.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: right bottom;
+    background-position: left center;
     background-attachment: fixed;
 }
 .total-donations-container .total-donations{
@@ -17,11 +19,21 @@
     justify-content: space-around;
     flex-wrap: wrap;
 }
-.total-donations-container h2{
+.total-donations-container h2,.top-willayas-container h2{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.5rem;
     margin: 0px;
     margin-bottom:3rem;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 2px 2px 3px black;
+}
+.top-willayas-container{
+    padding: 25px 10px;
+    border-top: 5px solid #f1f1f1;
+}
+.top-willayas{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }

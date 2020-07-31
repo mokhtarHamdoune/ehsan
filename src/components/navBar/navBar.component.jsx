@@ -24,7 +24,7 @@ class NavBar extends Component{
                          <img src={this.state.isToggleOn ? close_menu : open_menu} alt=""/>
                     </button>
                 </div>
-                <ul className={`nav-bar ${this.state.isToggleOn ? 'show' : ''}`}>
+                <ul className={`nav-bar ${this.state.isToggleOn ? 'show-nav' : ''}`}>
                     <li className="nav-item active">
                         <a href="#home">Home</a>
                     </li>

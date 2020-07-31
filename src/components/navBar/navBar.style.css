@@ -79,7 +79,7 @@ nav .nav-bar{
     .nav-bar .nav-item:last-child{
         float: none;
     }
-    .show{
+    .show-nav{
         height: 260px;
     }
 }

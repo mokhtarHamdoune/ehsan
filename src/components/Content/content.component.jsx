@@ -3,6 +3,7 @@ import './content.style.css';
 import ContentHeading from '../contentHeading/contentHeading.component';
 import Carousel from '../carousel/carousel.component';
 import TotalDonationCard from '../totalDonationCard/totalDonationCard.component';
+import CostumList from '../costumList/costumList.component';
 //images
 import charity_comunity1 from '../../images/charity-comunity-1.jpg';
 import charity_comunity2 from '../../images/charity-comunity-2.png';
@@ -36,6 +37,27 @@ class Content extends Component{
                         <TotalDonationCard title={'To People'} total={1000} />
                         <TotalDonationCard title={'To Mosque'} total={9999}  />
                         <TotalDonationCard title={'To Charities'} total={110999}  />
+                    </div>
+                </div>
+                <div className="top-willayas-container">
+                    <h2>Top Willayas donation</h2>
+                    <div className="top-willayas">
+                        <CostumList
+                            title={'People'}
+                            willayas={[{name:'Algeirs',rank:"up"},{name:'Oran',rank:"up"},{name:'Constantine',rank:"none"},{name:'Annaba',rank:"down"},{name:'Setif',rank:"down"}]}
+                        />
+                        <CostumList
+                            title={'Mosque'}
+                            willayas={[{name:'Tlemcen',rank:"up"},{name:'Oran',rank:"up"},{name:'Batna',rank:"none"},{name:'Annaba',rank:"down"},{name:'Algeirs',rank:"down"}]}
+                        />
+                        <CostumList
+                            title={'Charities'}
+                            willayas={[{name:'Tlemcen',rank:"up"},{name:'Canstantine',rank:"up"},{name:'Oran',rank:"none"},{name:'Annaba',rank:"down"},{name:'Algeirs',rank:"down"}]}
+                        />
+                        <CostumList
+                            title={'Totale'}
+                            willayas={[{name:'Tlemcen',rank:"up"},{name:'Algeirs',rank:"up"},{name:'Setif',rank:"none"},{name:'Annaba',rank:"down"},{name:'Oran',rank:"down"}]}
+                        />                      
                     </div>
                 </div>
             </div>
