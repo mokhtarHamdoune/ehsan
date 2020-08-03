@@ -1,18 +1,30 @@
-.carousels{
-    border-top: 5px solid #f1f1f1;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 10px;
+.main-container{
+    background-color:#fff;
 }
+.carousels{
+    /* border-top: 5px solid #aaa; */
+    display: flex;
+    flex-wrap: wrap;
+    margin-top:20px;
+}
+.carousels .main-carousel{
+    width:65%;
+    
+}
+.carousels .secondary-carousels{
+    width: 35%;
+}
+
 .total-donations-container{
-    border-top: 5px solid #f1f1f1;
-    padding:25px 10px;
-    background-image: url('../../images/scott-web.jpg');
+    margin-top:20px;
+    background-image: url('../../images/daniele-levis.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left center;
+    background-position: center top;
     background-attachment: fixed;
+    padding: 10px 0px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
 .total-donations-container .total-donations{
     display: flex;
@@ -20,20 +32,74 @@
     flex-wrap: wrap;
 }
 .total-donations-container h2,.top-willayas-container h2{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 2.5rem;
-    margin: 0px;
-    margin-bottom:3rem;
-    color: #ffffff;
+    width: 50%;
+    margin: 8px auto;
+    font-family: 'Righteous', cursive;
+    font-size: 3rem;
+    border-radius: 10px;
+    color: #fff;
+    border-bottom: 5px solid #fff;
+    border-top: 5px solid #fff;
+    text-shadow: 3px 2px 2px rgb(92, 92, 92);  
     text-align: center;
-    text-shadow: 2px 2px 3px black;
+    margin-bottom:1.2em;
 }
 .top-willayas-container{
-    padding: 25px 10px;
-    border-top: 5px solid #f1f1f1;
+    margin-top:20px;
+    background-image: url('../../images/daniele-levis.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    background-attachment: fixed;
+    padding: 10px 0px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
 }
 .top-willayas{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+.block-quote-container{
+    margin-top:20px;
+    background-image: url('../../images/daniele-levis.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 50px 10px;
+    border-top: 2px solid gray;
+}
+.block-quote{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 2px 2px black;
+    width: 55%;
+    margin: auto;
+    padding: 10px;
+    box-shadow: 1px 1px 10px -1px black;
+    transition: transform 0.3s;
+}
+.block-quote:hover{
+    transform: scale(1.2,1.2);
+}
+.block-quote p,.block-quote cite{
+    font-size: 1.1em;
+}
+.block-quote blockquote{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+@media(max-width:768px){
+    .carousels{
+        flex-direction: column;
+    }
+    .carousels .main-carousel,
+    .carousels .secondary-carousels{
+        width: 100%;
+    }
+    .block-quote{
+        width: 95%;
+    }
+    .block-quote blockquote{
+        font-size: 1.3em;
+    }
 }
