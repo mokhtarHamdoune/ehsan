@@ -5,8 +5,12 @@
     width:120px;
     padding: 12px 5px;
     font-family: sans-serif;
+    transition: box-shadow 280ms;
+    box-shadow: 1px 1px 6px -3px black;
 }
-
+.linkButton:hover{
+    box-shadow: 1px 1px 8px -2px black;
+}
 .primary{
     background-color: #058f58;
 }
@@ -30,4 +34,3 @@
 .link:hover{
     background-color: #039b89;
 }
-

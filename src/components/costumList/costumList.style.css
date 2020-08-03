@@ -1,19 +1,23 @@
 .costum-list{
     width:300px;
     margin: 10px;
-    border: 1px solid #03A693;
-    border-bottom: none;
+    background: rgba(255,255,255,0.7);
+    border-bottom: 1px solid #03A693;
+}
+.costum-list:hover{
+    transform: scale(1.1,1.1);
 }
 .costum-list .list-title{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #fff;
-    background-color: #03A693;
+    background-color: #fff;
     font-family: sans-serif;
     padding:10px;
 }
 .costum-list .list-title h3{
+    font-family: 'El Messiri', sans-serif;
+    color: #058f58;
     font-size: 1.4rem;
     margin: 0px;
 }
@@ -38,7 +42,7 @@
     justify-content: space-between;
     font-size: 1.2rem;
     padding: 10px;
-    border-bottom:1px solid #03A693;
+    border-top:1px solid #03A693;
 }
 
 .costum-list .list-content .list-item .classment-bullet{
@@ -55,12 +59,18 @@
         width: 80%;
         margin: auto;
         margin-bottom: 10px;
+        transition:none;
+    }
+    .costum-list:hover{
+        transform: none;
     }
     .costum-list .list-title .list-toggle-btn{
         display: block;
     }
     .costum-list .list-content{
-       display: none;
+        max-height: 0px; 
+        overflow: hidden;
+        transition: all 0.3s ease-in;
     }
 }
 @media (max-width:425px){

@@ -6,7 +6,7 @@ class  Carousel extends Component{
         super(props)
         this.state={
             imgIndex:0,
-            numberOfImages:props.images.length
+            numberOfImages:props.images.length,
         }
     }
     componentDidMount(){
@@ -22,16 +22,14 @@ class  Carousel extends Component{
         return(
             <div className={`carousel ${this.props.reverse?'reverse':''} ${this.props.right?'right':''}`}> 
                 <div className="carousel-slide">
-                    <div className="slid-images">
+                    {
+                        this.props.images.map((image,index)=><img  key={index} className={index===this.state.imgIndex ? 'fade':''} src={image.src} alt={image.alt} style={{display:index===this.state.imgIndex ? 'block':'none',height:this.props.height}}/>)
+                    }
+                    {/* <img src={this.state.img.src} alt={this.state.img.alt}/> */}
+                    <div className="slide-indicator">
                         {
-                            this.props.images.map((image,index)=><img  key={index} className={index===this.state.imgIndex ? 'fade':''} src={image.src} alt={image.alt} style={{display:index===this.state.imgIndex ? 'block':'none'}}/>)
+                            this.props.images.map((image,index)=><span key={index} className={`dot ${index===this.state.imgIndex ? 'black-dot':''}`}></span>)
                         }
-                        {/* <img src={this.state.img.src} alt={this.state.img.alt}/> */}
-                        <div className="slide-indicator">
-                            {
-                                this.props.images.map((image,index)=><span key={index} className={`dot ${index===this.state.imgIndex ? 'black-dot':''}`}></span>)
-                            }
-                        </div>
                     </div>
                 </div>
                 <div className="carousel-content">

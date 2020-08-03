@@ -6,7 +6,7 @@ const ContentHeading = ()=>{
         <div className="content-heading-container">
            <div className="content-heading">
                <div className="intro">
-                    <p className="">If you are one  of the people who want  to help people for doing therapy, building their house, or help the charity community </p>
+                    <p className="">If you are one  of the people who want  to help others who need therapy, money to build a house, or maybe you want to help the charities </p>
                     <LinkButton href="#donate" bg_color="link">Click Here</LinkButton>
                </div>
            </div>

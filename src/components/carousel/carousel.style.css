@@ -1,31 +1,19 @@
 .carousel{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 30%;
-    min-width: 200px;
-    margin: 10px;
-    box-shadow: 0px 0px 5px 1px #333;
-}
-/* carousel-slide container the images and the dot indicator*/
-.carousel-slide{
     position: relative;
-    flex: 1;
-    height:100%;
+    border:2px solid gray;
 }
-.carousel .carousel-slide .slid-images img{
+
+/* carousel-slide container the images and the dot indicator*/
+.carousel .carousel-slide  img{
     width: 100%;
-    height: 300px;
-    box-shadow: 0px 0px 5px 1px #333;
     object-fit: cover;
 }
-.slide-indicator{
+.carousel .carousel-slide .slide-indicator{
     position: absolute;
     display: block;
     width: 100%;
     text-align: center;
-    bottom:0px;
+    bottom:0;
 }
 .slide-indicator .dot {
     height: 15px;
@@ -37,12 +25,19 @@
     transition: background-color 0.6s ease;
   }
 .carousel-content{
-    flex:1;
-    padding: 25px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
     text-align: center;
 }
 .carousel .carousel-content .presentation{
+    position: absolute;
+    bottom: 0;
     font-family: 'Philosopher', sans-serif;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.7);
     font-size: 1.4rem;
 }
 .black-dot{
@@ -70,23 +65,11 @@
 
 @media(max-width:768px){
     .carousel{
-        position: relative;
-        width: 45%;
-        margin: 5px;
+        width: 70%;
+        margin: auto;
         margin-bottom: 10px;
     }
-    .carousel .carousel-content{
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        background-color: rgba(0, 0, 0, 0.3);
-    }
     .carousel .carousel-content .presentation{
-        position: absolute;
-        bottom:18px;
-        left: 0;
-        color: #fff;
-        margin: auto;
         font-size: 1.3em;
     }
 }
@@ -96,7 +79,6 @@
         width: 80%;
     }
     .carousel .carousel-content .presentation{
-        margin: auto;
         font-size: 1.2em;
     }
 }

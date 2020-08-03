@@ -14,12 +14,12 @@ function CostumList({title,willayas}){
                 <h3>{title}</h3>
                 <button className={`list-toggle-btn`} onClick={handleClick}>
                     {toggle ? 
-                    <MinusCircleOutlined style={{color:'#fff',fontSize:'1.7em'}} /> :
-                    <PlusCircleOutlined  style={{color:'#fff',fontSize:'1.7em'}}/>
+                    <MinusCircleOutlined style={{color:'#058f58',fontSize:'1.7em'}} /> :
+                    <PlusCircleOutlined  style={{color:'#058f58',fontSize:'1.7em'}}/>
                     }
                 </button>
             </div>
-            <ol className={`list-content`} style={{display:toggle ? 'block':''}}>
+            <ol className={`list-content`}  style={{maxHeight:toggle ? '100vh':''}}>
                 {willayas.map((willaya,index)=>{
                     return(
                         <li key={index} className="list-item">

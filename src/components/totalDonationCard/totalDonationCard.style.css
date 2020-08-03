@@ -1,33 +1,65 @@
 .totalDonationCard{
-    /* box-sizing: border-box; */
-    min-width: 290px;
+    min-width: 320px;
     height: 150px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
     padding: 10px;
     margin: 5px;
-    box-shadow: 0px 0px 6px 3px rgb(250, 246, 246);
-    background-color: rgba(255, 255, 255, 0.7);
+    border: 1px solid #03A693;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px black;
+    background: rgb(255,255,255,0.5);
+    transition: transform 0.3s;
+}
+
+.totalDonationCard .total-donation-title h3{
+   margin:0px;
 }
 .totalDonationCard .total-donation-title{
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: 'Philosopher', sans-serif;
     font-size: 1.5em;
-    color: #03A693;
+    color: #03849C;
+    text-shadow: 1px 1px 2px #000;
+    padding:15px 0px;
 }
 .totalDonationCard .total-donation{
+    position: relative;
     display: flex;
-    justify-content: center;
     align-items: center;
     width:100px;
     height:100px;
-    background-color: #fff;
     border-radius: 50%;
-    border: 2px solid #03A693;
+    border:2px solid #fff;
+    box-shadow: 1px 1px 5px 1px black;
+    animation: shake-around 0.9s infinite;
+
+}
+.totalDonationCard:hover{
+    transform: scale(1.05,1.05);
 }
 .totalDonationCard .total-donation h3{
-    color: #03A693;
-    /* border: 1px solid red; */
+    font-family: sans-serif;
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    color: #03849C;
+    padding: 7px 0px;
+    font-size: 1.3em;
+    border-radius:7px;
+}
+
+@keyframes shake-around{
+    0%{
+        transform: rotate(0deg);
+    }25%{
+        transform: rotate(3deg);
+    }50%{
+        transform: rotate(0deg);
+    }75%{
+        transform: rotate(-3deg);
+    }100%{
+        transform: rotate(0deg);
+    } 
 }
