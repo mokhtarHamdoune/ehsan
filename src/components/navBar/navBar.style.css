@@ -2,9 +2,9 @@ nav{
     display: flex;
     align-items: center;
     position: sticky;
-    background-color: #333;
+    background-color: #fff;
     top:0;
-    padding: 4px 10px;
+    padding: 0px 10px;
     z-index: 2;
 }
 nav .menu-header .logo{
@@ -30,27 +30,39 @@ nav .nav-bar{
     margin: 0px;
     width: 100%;
 }
-.nav-item{
+.nav-bar .nav-item {
     display: inline-block;
     font-size: 1.2rem;
-    margin:0px 6px ;
+    padding: 0px 10px;;
 }
-.nav-bar .nav-item a{
-    color: #fff;
+.nav-bar .nav-item > a{
+    font-family: 'Lato', sans-serif;
+    color: #000;
     display: block;
     text-decoration: none;
     padding: 14px 10px;
+    transition: background-color 0.2s ease-in-out;
 }
-.nav-bar .nav-item:hover{
+.nav-bar .nav-item  a:hover{
+    box-sizing: border-box;
     background-color: #03A693;
-    border-radius: 5px;
+    color: #fff;
 }
+
 .nav-bar .nav-item:last-child{
     float: right;
+    vertical-align: baseline;
 }
-.active{
+.nav-bar .nav-item:last-child a{
+   float: left;
+}
+.nav-bar .nav-item:last-child a:last-child{
+    box-sizing:border-box;
+    border-left:1px inset #03A693;
+}
+.nav-bar .nav-item .active{
+    color: #fff;
     background-color: #03A693;
-    border-radius: 5px;
 }
 @media(max-width:768px){
     nav{

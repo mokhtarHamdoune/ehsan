@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import './content.style.css';
+import './home.style.css';
 import ContentHeading from '../contentHeading/contentHeading.component';
 import Carousel from '../carousel/carousel.component';
 import TotalDonationCard from '../totalDonationCard/totalDonationCard.component';
