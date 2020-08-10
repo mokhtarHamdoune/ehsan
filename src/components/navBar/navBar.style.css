@@ -6,6 +6,7 @@ nav{
     top:0;
     padding: 0px 10px;
     z-index: 2;
+    border-bottom: 1px solid #eee;
 }
 nav .menu-header .logo{
     color:#058f58;

@@ -1,15 +1,20 @@
 .sign-up-container{
     display: flex;
+    width: 85%;
+    margin:30px auto;
+    border: 1px solid #aaa;
 }
 .sign-up-container .sign-up-left{
     width: 50%;
+    border-right: 1px solid #aaa;
 }
 .sign-up-container .sign-up-left .form-container{
-    border: 1px solid black;
-    border-radius: 8px;
-    width: 60%;
-    margin:10px auto;
+    width: 70%;
+    min-width:350px;
+    margin:25px auto;
     padding:50px 0px;
+    background-color: #fff;
+    border: 1px solid #aaa;
 }
 .sign-up-container .sign-up-left .form-container h1{
     text-align: center;
@@ -18,11 +23,102 @@
     font-family: 'Lato', sans-serif;
 }
 .sign-up-container .sign-up-left .form-container form{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 .sign-up-container .sign-up-right{
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../images/mads-schmidt.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+.sign-up-container .sign-up-right h1{
+    text-align: center;
+    color:#058f58;
+    font-family: 'El Messiri', sans-serif;
+    font-size: 5rem;
+    letter-spacing: 6px;
+    text-shadow: 1px 1px 2px black;
+    margin-bottom: 0px;
+}
+.sign-up-container .sign-up-right .requirements{
+    list-style: none;
+    list-style-image: url('../../images/information.png') ;
+    font-size: 1.4rem;
+    line-height:2.8rem;
+    margin: 0px;
+    margin-bottom:1.5rem;
+}
+
+.sign-up-container .sign-up-right .directing-icon{
+    box-sizing: border-box;
+    font-size: 3.2rem;
+    color: #646363;
+    animation: to-left-direction 0.28s infinite 1s;
+    transition: all 0.28s;
+}
+.sign-up-container .sign-up-right .directing-icon:hover{
+    border-radius: 5px;
+    border: 1px solid #646363;
+    box-shadow: 1px 1px 5px -2px black;
+}
+@keyframes to-left-direction{
+    0%{
+        transform: translateX(0rem);
+    }50%{
+        transform: translateX(-0.8rem);
+    }100%{
+        transform: translateX(0rem);
+    }
+}
+@keyframes to-bottom-direction{
+    0%{
+        transform: rotate(-90deg);
+        transform: translateY(0rem);
+    }50%{
+        transform:translateY(-0.8rem);
+    }100%{
+        transform: rotate(-90deg);
+        transform: translateY(0rem);
+    }
+}
+@media (max-width:992px){
+    .sign-up-container{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .sign-up-container .sign-up-right{
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+    }
+    .sign-up-container .sign-up-left{
+        width: 100%;
+        border:none;
+    }
+    .sign-up-container .sign-up-left .form-container{
+        width: 60%;
+    }
+    .sign-up-container .sign-up-right .requirements{
+        font-size: 1.1rem;
+    }
+    .sign-up-container .sign-up-right .directing-icon{
+        box-sizing: border-box;
+        font-size: 3.2rem;
+        color: #646363;
+        transform: rotate(-90deg);
+        animation: none;
+        transition: all 0.28s;
+    }
+    
+}
+@media (max-width:768px){
+    .sign-up-container{
+        width: 100%;
+    }
 }
