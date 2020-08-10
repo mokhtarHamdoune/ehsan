@@ -4,6 +4,7 @@ import NavBar from './components/navBar/navBar.component';
 import Footer from './components/footer/footer.component';
 import Home from './components/home/home.component';
 import Donate from './components/donate/donate.component';
+import SignUp from './components/sign-up/sign-up.component';
 import {Switch,Route} from 'react-router-dom';
 import './App.css';
 
@@ -13,15 +14,21 @@ function App() {
       <Header/>
       <NavBar />
       <Switch >
+        
         <Route path="/donate">
           <Donate />
         </Route>
+
         <Route path="/contact-us" />
+
         <Route path="/about-us"  />
+
+        <Route path="/sign-up" component={SignUp} />
 
         <Route path="/"> 
             <Home />
         </Route>
+
       </Switch>
       <Footer/>
     </div>

@@ -1,0 +1,28 @@
+.sign-up-container{
+    display: flex;
+}
+.sign-up-container .sign-up-left{
+    width: 50%;
+}
+.sign-up-container .sign-up-left .form-container{
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 60%;
+    margin:10px auto;
+    padding:50px 0px;
+}
+.sign-up-container .sign-up-left .form-container h1{
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom:5rem;
+    font-family: 'Lato', sans-serif;
+}
+.sign-up-container .sign-up-left .form-container form{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sign-up-container .sign-up-right{
+    width: 50%;
+}
