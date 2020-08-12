@@ -1,6 +1,13 @@
 .main-container{
     background-color:#fff;
 }
+.login-form{
+    width: 100%;
+    padding:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .carousels{
     /* border-top: 5px solid #aaa; */
     display: flex;

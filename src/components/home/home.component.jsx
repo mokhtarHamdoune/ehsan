@@ -13,11 +13,14 @@ import help_people3 from '../../images/help-people-3.jpg';
 import help_people2 from '../../images/ben-white.jpg';
 import mosque1 from '../../images/Ketchaoua_Mosque.jpg';
 import mosque2 from '../../images/mosque.jpg';
+
 class Content extends Component{
 
     constructor(props) {
         super(props);
-        this.state = {width: 0 };
+        this.state = {
+            width: 0 
+        };
         this.updateWindowDimensions = this.updateWindowDimensions.bind(this);
     }
     componentDidMount() {
@@ -32,7 +35,10 @@ class Content extends Component{
     updateWindowDimensions() {
     this.setState({ width: window.innerWidth});
     }
+
+    
     render(){
+
         return (
             <div className="main-container">
                 <ContentHeading />
