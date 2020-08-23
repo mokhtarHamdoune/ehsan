@@ -11,6 +11,7 @@ import FormInput from './components/FormInput/form-input.component';
 import Button from './components/button/button.component';
 //react-router-dom
 import {Switch,Route} from 'react-router-dom';
+import {GoogleOutlined,LoginOutlined} from '@ant-design/icons'
 import './App.css';
 
 class  App extends Component{
@@ -43,7 +44,10 @@ class  App extends Component{
           <form action="" className="login-form">
               <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
               <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
-              <Button type="submit" className='btn' color="secondary">Connextion</Button>
+              <div className="form-btns">
+                <Button type="button" className="btn" color="link" block><GoogleOutlined /> Connect With google</Button>
+                <Button type="submit" className='btn' color="secondary" block><LoginOutlined /> Connextion</Button>
+              </div>
           </form>
         </Modal>
         <Switch >

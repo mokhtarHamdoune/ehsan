@@ -1,107 +1,106 @@
 .main-container{
     background-color:#fff;
 }
-.login-form{
+.carousel-container{
     width: 100%;
-    padding:10px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-}
-.carousels{
-    /* border-top: 5px solid #aaa; */
-    display: flex;
     flex-wrap: wrap;
-    margin-top:20px;
+    padding: 20px 0px;
+    border-top: 8px solid #eee;
+    border-bottom: 8px solid #eee;
 }
-.carousels .main-carousel{
-    width:65%;
-    
-}
-.carousels .secondary-carousels{
-    width: 35%;
+.carousel-grid{
+    width: 30%;
+    min-width:250px;
 }
 
 .total-donations-container{
-    margin-top:20px;
-    background-image: url('../../images/daniele-levis.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    background-attachment: fixed;
-    padding: 10px 0px;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-}
-.total-donations-container .total-donations{
+    border-top: 8px solid #eee;
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px 0px;
 }
-.total-donations-container h2,.top-willayas-container h2{
-    width: 50%;
+
+/*map*/
+.map-container{
+    background-color: #03A693;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-top: 8px solid #eee;
+    border-bottom: 8px solid #eee;
+}
+.main-container .map-title{
+    width: 100%;
+    color: #fff;
+    font-size:3.5rem;
+    text-align: center;
+    text-shadow: 1px 1px 5px black;
+    font-family: 'Righteous', cursive;
+}
+.top-willayas-container{
+    padding: 10px 0px;
+    border-bottom: 8px solid #eee;
+}
+.top-willayas-container h2{
+    width: 60%;
     margin: 8px auto;
+    padding:10px;
     font-family: 'Righteous', cursive;
     font-size: 3rem;
     border-radius: 10px;
-    color: #fff;
-    border-bottom: 5px solid #fff;
-    border-top: 5px solid #fff;
-    text-shadow: 3px 2px 2px rgb(92, 92, 92);  
+    color: #03A693;
+    border-bottom:2px solid #03A693 ;
+    border-top:2px solid #03A693 ;
+    text-shadow: 3px 3px 0px rgb(92, 92, 92);  
     text-align: center;
     margin-bottom:1.2em;
-}
-.top-willayas-container{
-    margin-top:20px;
-    background-image: url('../../images/daniele-levis.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: left top;
-    background-attachment: fixed;
-    padding: 10px 0px;
-    border-top: 2px solid gray;
-    border-bottom: 2px solid gray;
-}
-.top-willayas{
+} 
+.top-willayas-container .top-willayas{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 .block-quote-container{
-    margin-top:20px;
-    background-image: url('../../images/daniele-levis.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 50px 10px;
-    border-top: 2px solid gray;
+    padding:120px 0px;
+    border-bottom: 8px solid #eee;
+    background-image: url('../../images/quot-background-2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
+
 .block-quote{
-    color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.5);
-    text-shadow: 2px 2px 2px black;
-    width: 55%;
+    color: #000;
+    width: 75%;
     margin: auto;
     padding: 10px;
-    box-shadow: 1px 1px 10px -1px black;
-    transition: transform 0.3s;
-}
-.block-quote:hover{
-    transform: scale(1.2,1.2);
 }
 .block-quote p,.block-quote cite{
-    font-size: 1.1em;
+    font-size: 1.3em;
+    color: #03849C;
 }
 .block-quote blockquote{
-    font-size: 1.5em;
-    font-weight: bold;
+    font-size: 1.9em;
 }
 @media(max-width:768px){
-    .carousels{
+    .carousel-container{
         flex-direction: column;
     }
-    .carousels .main-carousel,
-    .carousels .secondary-carousels{
+    .carousel-container .carousel-grid{
         width: 100%;
+    }
+    .map-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .map-container .map-title{
+        font-size: 2.5rem;
     }
     .block-quote{
         width: 95%;

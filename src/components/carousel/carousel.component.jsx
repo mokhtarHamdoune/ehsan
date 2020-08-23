@@ -23,7 +23,7 @@ class  Carousel extends Component{
             <div className={`carousel ${this.props.reverse?'reverse':''} ${this.props.right?'right':''}`}> 
                 <div className="carousel-slide">
                     {
-                        this.props.images.map((image,index)=><img  key={index} className={index===this.state.imgIndex ? 'fade':''} src={image.src} alt={image.alt} style={{display:index===this.state.imgIndex ? 'block':'none',height:this.props.height}}/>)
+                        this.props.images.map((image,index)=><img  key={index} className={index===this.state.imgIndex ? 'fade':''} src={image.src} alt={image.alt} style={{display:index===this.state.imgIndex ? 'block':'none'}}/>)
                     }
                     {/* <img src={this.state.img.src} alt={this.state.img.alt}/> */}
                     <div className="slide-indicator">

@@ -5,10 +5,14 @@
     font-size: 1.2em;
     box-shadow: 2px 2px 8px -4px black;
     transition: all 0.15s;
+    margin:5px;
 }
 .btn:hover{
     cursor: pointer;
     box-shadow: 2px 2px 11px -2px black;
+}
+.btn-block{
+    width: 100%;
 }
 .btn-primary{
     background-color: #058f58;

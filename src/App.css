@@ -1,0 +1,10 @@
+.login-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form .form-btns{
+    padding:15px ;
+}

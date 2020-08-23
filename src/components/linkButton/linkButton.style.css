@@ -2,12 +2,12 @@
     text-decoration: none;
     display:inline-block;
     color: white;
-    width:120px;
-    padding: 12px 5px;
+    padding: 12px 25px;
     font-family: sans-serif;
     transition: box-shadow 280ms;
     box-shadow: 1px 1px 6px -3px black;
 }
+
 .linkButton:hover{
     box-shadow: 1px 1px 8px -2px black;
 }
@@ -33,4 +33,12 @@
 
 .link:hover{
     background-color: #039b89;
+}
+
+.black{
+    background-color: black;
+}
+
+.black:hover{
+    background-color: #111;
 }
