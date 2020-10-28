@@ -1,7 +1,7 @@
 .form-input{
     position: relative;
     margin-bottom:2rem;
-    width:80%;
+    width:100%;
 }
 
 .form-input input{
@@ -28,16 +28,17 @@
 }
 .form-input input:focus{
     background-color: #fafafa;
-    border-bottom: 1px solid #03A693;
+    border-bottom: 1px solid #000;
 }
 .form-input input:not([value=""]){
-    border-bottom: 1px solid #03A693;
+    border-bottom: 1px solid #000;
 }
 .form-input input:focus + label{
-    top:-20px;
-    color: #03A693;
+    top:-23px;
+    color: #000;
+    font-size:1rem;
 }
 .form-input input:not([value=""]) + label{
     top:-20px;
-    color: #03A693;
+    color: #000;
 }

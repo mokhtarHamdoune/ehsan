@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component} from 'react';
 import './carousel.style.css';
 
 class  Carousel extends Component{
@@ -25,18 +25,21 @@ class  Carousel extends Component{
                     {
                         this.props.images.map((image,index)=><img  key={index} className={index===this.state.imgIndex ? 'fade':''} src={image.src} alt={image.alt} style={{display:index===this.state.imgIndex ? 'block':'none'}}/>)
                     }
-                    {/* <img src={this.state.img.src} alt={this.state.img.alt}/> */}
                     <div className="slide-indicator">
                         {
                             this.props.images.map((image,index)=><span key={index} className={`dot ${index===this.state.imgIndex ? 'black-dot':''}`}></span>)
                         }
                     </div>
                 </div>
-                <div className="carousel-content">
-                    <p className="presentation">
-                        {this.props.children}
-                    </p>
-                </div>
+                {
+                    this.props.children ? 
+                    <div className="carousel-content">
+                        <p className="presentation">
+                            {this.props.children}
+                        </p>
+                    </div>
+                    : ""
+                }
             </div>
         );
     }

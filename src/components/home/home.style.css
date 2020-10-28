@@ -7,9 +7,13 @@
     justify-content: space-around;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px 0px;
+    padding: 10px 0px;
     border-top: 8px solid #eee;
     border-bottom: 8px solid #eee;
+    background-image: url('../../images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .carousel-grid{
     width: 30%;
@@ -22,6 +26,10 @@
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 20px 0px;
+    background-image: url('../../images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /*map*/
@@ -45,6 +53,10 @@
 .top-willayas-container{
     padding: 10px 0px;
     border-bottom: 8px solid #eee;
+    background-image: url('../../images/background-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .top-willayas-container h2{
     width: 60%;

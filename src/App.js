@@ -11,7 +11,7 @@ import FormInput from './components/FormInput/form-input.component';
 import Button from './components/button/button.component';
 //react-router-dom
 import {Switch,Route} from 'react-router-dom';
-import {GoogleOutlined,LoginOutlined} from '@ant-design/icons'
+import {GoogleOutlined,LoginOutlined, FacebookFilled} from '@ant-design/icons'
 import './App.css';
 
 class  App extends Component{
@@ -22,6 +22,7 @@ class  App extends Component{
       password:'',
       loginOn:false
     }
+    this.handleLoginChanges= this.handleLoginChanges.bind(this);
     this.handleLoginToggle =  this.handleLoginToggle.bind(this);
   }
 
@@ -44,10 +45,10 @@ class  App extends Component{
           <form action="" className="login-form">
               <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
               <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
-              <div className="form-btns">
-                <Button type="button" className="btn" color="link" block><GoogleOutlined /> Connect With google</Button>
-                <Button type="submit" className='btn' color="secondary" block><LoginOutlined /> Connextion</Button>
-              </div>
+              <Button type="submit" className='btn' color="secondary" block><LoginOutlined /> Connextion</Button>
+              <hr/>
+              <Button type="button" className="btn" color="link" block><GoogleOutlined /> Connect With google</Button>
+              <Button type="button" className="btn" color="black" block><FacebookFilled /> Connect With Facebook</Button>
           </form>
         </Modal>
         <Switch >

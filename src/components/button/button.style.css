@@ -36,3 +36,10 @@
 .btn-link:hover{
     background-color: #027b91;
 }
+
+.btn-black{
+    background-color: #000;
+}
+.btn-black:hover{
+    background-color: #101010;
+}
