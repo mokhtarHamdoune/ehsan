@@ -4,18 +4,18 @@ import Button from '../button/button.component';
 import {Line} from 'rc-progress';
 import LinkButton from '../linkButton/linkButton.component';
 import {DollarCircleOutlined, InfoCircleOutlined} from '@ant-design/icons';
-//css style
+// //css style
 import './publication.style.css';
-//reoct router
+// //reoct router
 import { useRouteMatch } from 'react-router-dom';
 
 const Publication = ({publication})=>{
     let {url} = useRouteMatch();
     return (
-        <div className="pub-container">
+        <div className="pub">
             <div className="pub-left-side">
                 <Carousel images={publication.images}/>
-                <Button type="button" color={'primary'}><DollarCircleOutlined /> Donate Now</Button>
+                <Button type="button" color={'primary'}><DollarCircleOutlined />Donate Now</Button>
             </div>
             <div className="pub-right-side">
                <div className="progress-container">
@@ -30,7 +30,7 @@ const Publication = ({publication})=>{
                         <span>{parseInt(publication.progress.goal)-parseInt(publication.progress.current)}MDA To Go</span>
                     </div>
                </div>
-               <div className="about-pub-container">
+                <div className="about-pub-container">
                     <div className="about-publisher">
                         <h4 className="about-pub-title">About Publisher</h4>
                         <ul  className="abou-pub-list">
@@ -49,15 +49,15 @@ const Publication = ({publication})=>{
                             <li>Type: {publication.about.type}</li>
                             <li>Situation: <span className={`situation 
                             ${
-                                publication.about.situation === 'Urgent' ? 'danger-sit': 
-                                publication.about.situation === 'Medium' ? 'warning-sit' :'success-sit'
+                                publication.about.situation === 'Red' ? 'danger-sit': 
+                                publication.about.situation === 'Yellow' ? 'warning-sit' :'success-sit'
                             }`}>{publication.about.situation }</span></li>
                             <li>Pub Date: {publication.about.pub_date}</li>
                             <li>Pub Heure: {publication.about.pub_hour}</li>
                         </ul>
                         <LinkButton href={`${url}/about/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
                     </div>
-               </div>
+                </div>
             </div>
         </div>
     )

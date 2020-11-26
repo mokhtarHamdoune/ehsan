@@ -1,0 +1,22 @@
+.sb-container{
+    border-bottom:1px solid #eee ;
+    background-color: #fff;
+    padding: 10px;
+}
+.sb-form{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+.sb-form-part{
+    flex: 1;
+    margin:8px;
+}
+.sb-form-part label{
+    font-size: 17px;
+    font-family: sans-serif;
+}
+.sb-form-part input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+}

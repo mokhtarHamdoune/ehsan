@@ -1,0 +1,56 @@
+export const typeDnation=[
+    { 
+        value:"people",
+        label:'People'
+    },{ 
+        value:"charity",
+        label:'Charity'
+    },{ 
+        value:"mosque",
+        label:'Mosque'
+    }
+]
+export const wilayas=[
+    {
+        value:'adrar',
+        label:'Adrar'
+    },
+    {
+        value:'chlef',
+        label:'Chlef'
+    },
+    {
+        value:'laghouat',
+        label:'Laghouat'
+    },
+    {
+        value:'oum_bouaghi',
+        label:'Oum bouaghi'
+    },
+    {
+        value:'batna',
+        label:'Batna'
+    },
+    {
+        value:'bejaia',
+        label:'Bejaia'
+    },
+    {
+        value:'biskra',
+        label:'Biskra'
+    }
+]
+export const status=[
+    {
+        value:'green',
+        label:'Green'
+    },
+    {
+        value:'yellow',
+        label:'Yellow'
+    },
+    {
+        value:'red',
+        label:'Red'
+    }
+]

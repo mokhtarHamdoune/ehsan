@@ -31,7 +31,6 @@ class  App extends Component{
   }
 
   handleLoginToggle(loginState){
-    console.log(loginState);
     this.setState({loginOn:loginState});
   }
 

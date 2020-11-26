@@ -1,15 +1,17 @@
-.pub-container{
+.pub{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 85%;
-    margin:15px auto;
+    margin:auto;
+    margin-top:15px;
     padding:15px 30px;
     border:2px solid #eee;
     background-color: #fdfdfd;
+    box-shadow: 0px 0px 2px 1px #aaa;
 }
 
-.pub-container .pub-left-side{
+.pub .pub-left-side{
     width: 40%;
     min-width: 320px;
     display: flex;
@@ -17,33 +19,33 @@
     align-items: center;
 }
 
-.pub-container .pub-right-side{
+.pub .pub-right-side{
     width:50%;
     display: flex;
     flex-direction: column;
 
 }
-.pub-container .pub-right-side .progress-container{
+.pub .pub-right-side .progress-container{
     width: 100%;
     border: 1px solid #eee;
     padding: 15px;
     margin-bottom: 15px;
     background-color: #fff;
 }
-.pub-container .pub-right-side .progress-container .top-of-progress,
-.pub-container .pub-right-side .progress-container .bottom-of-progress{
+.pub .pub-right-side .progress-container .top-of-progress,
+.pub .pub-right-side .progress-container .bottom-of-progress{
     display: flex;
     justify-content: space-between;
     font-family: sans-serif;
     font-size: 0.9em;
     margin:4px 0px;
 }
-.pub-container .pub-right-side .about-pub-container{
+.pub .pub-right-side .about-pub-container{
    display:flex;
    justify-content:space-between;
 }
-.pub-container .pub-right-side .about-pub-container .about-publisher,
-.pub-container .pub-right-side .about-pub-container .about-publication{
+.pub .pub-right-side .about-pub-container .about-publisher,
+.pub .pub-right-side .about-pub-container .about-publication{
     border: 1px solid #eee;
     min-width:48%;
     display: flex;
@@ -86,38 +88,38 @@
 .success-sit{
     color: green;
 }
-.pub-container .pub-right-side .about-pub-container .block{
+.pub .pub-right-side .about-pub-container .block{
     display: none;
     border: 2px solid black;
 }
 @media(max-width:990px){
-    .pub-container{
+    .pub{
         width: 100%;
         padding: 5px;
     }
-    .pub-container .pub-right-side{
+    .pub .pub-right-side{
         width: 55%;
     }
 }
 
 @media(max-width:768px){
-    .pub-container{
+    .pub{
         flex-direction: column;
         align-items: center;
     }
-    .pub-container .pub-left-side,.pub-container .pub-right-side{
+    .pub .pub-left-side,.pub .pub-right-side{
         width:80%;
     }
 }
 
 @media(max-width:500px){
-    .pub-container .pub-left-side,.pub-container .pub-right-side{
+    .pub .pub-left-side,.pub .pub-right-side{
         width:100%;
     }
-    .pub-container .pub-right-side .about-pub-container .about-publication{
+    .pub .pub-right-side .about-pub-container .about-publication{
         display: none;
     }
-    .pub-container .pub-right-side .about-pub-container .about-publisher{
+    .pub .pub-right-side .about-pub-container .about-publisher{
         width: 100%;
     }
     .about-publisher .abou-pub-list {
@@ -127,4 +129,4 @@
         display: block;
     }
 
-}
+} 

@@ -8,7 +8,7 @@ class   Modal extends React.Component{
         this.modalRef= React.createRef();
     }
     componentDidMount(){
-        window.addEventListener('click',(e)=>e.target===this.modalRef.current ? this.props.handleLoginToggle(false) : e.preventDefault());
+        window.addEventListener('click',(e)=>e.target===this.modalRef.current ? this.props.handleLoginToggle(false) : null);
     }
     componentWillUnmount(){
         window.removeEventListener('click');
