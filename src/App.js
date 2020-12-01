@@ -5,6 +5,7 @@ import Footer from './components/footer/footer.component';
 import Home from './components/home/home.component';
 import Donate from './components/donate/donate.component';
 import SignUp from './components/sign-up/sign-up.component';
+import AboutUs from './components/about-us/about-us.component';
 //login modal
 import Modal from './components/modal/modal.component';
 import FormInput from './components/FormInput/form-input.component';
@@ -58,7 +59,7 @@ class  App extends Component{
   
           <Route path="/contact-us" />
   
-          <Route path="/about-us"  />
+          <Route path="/about-us" component={AboutUs} />
   
           <Route path="/sign-up" component={SignUp} />
   

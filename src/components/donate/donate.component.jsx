@@ -38,7 +38,7 @@ export default class Donate extends Component{
                 handleInputChange={this.handleInputChange}
                 isAlmostGoal={isAlmostGoal}/>
                 {
-                    publications.map(publication=><Publication publication={publication}/>)
+                    publications.map(publication=><Publication key={publication.id} publication={publication}/>)
                 }
             </div>
         );
