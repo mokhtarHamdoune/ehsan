@@ -6,6 +6,7 @@ import Home from './components/home/home.component';
 import Donate from './components/donate/donate.component';
 import SignUp from './components/sign-up/sign-up.component';
 import AboutUs from './components/about-us/about-us.component';
+import ContactPage from './components/contact-page/contactPage.component';
 //login modal
 import Modal from './components/modal/modal.component';
 import FormInput from './components/FormInput/form-input.component';
@@ -57,7 +58,9 @@ class  App extends Component{
             <Donate />
           </Route>
   
-          <Route path="/contact-us" />
+          <Route path="/contact-us" > 
+            <ContactPage />
+          </Route>
   
           <Route path="/about-us" component={AboutUs} />
   
