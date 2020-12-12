@@ -7,6 +7,7 @@ import Donate from './components/donate/donate.component';
 import SignUp from './components/sign-up/sign-up.component';
 import AboutUs from './components/about-us/about-us.component';
 import ContactPage from './components/contact-page/contactPage.component';
+import UserAccount from './components/user-account/user_account.component';
 //login modal
 import Modal from './components/modal/modal.component';
 import FormInput from './components/FormInput/form-input.component';
@@ -42,7 +43,7 @@ class  App extends Component{
       <div className="App">
         <Header/>
         <NavBar  handleLoginToggle={this.handleLoginToggle}/>
-        <Modal title="Login" toggle={loginOn} handleLoginToggle={this.handleLoginToggle}> 
+        <Modal title="Login" toggle={loginOn} handleLoginToggle={this.handleLoginToggle} modalWidth='25%' > 
           <form action="" className="login-form">
               <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
               <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
@@ -65,10 +66,17 @@ class  App extends Component{
           <Route path="/about-us" component={AboutUs} />
   
           <Route path="/sign-up" component={SignUp} />
+
+          
+          <Route path='/user'>
+              <UserAccount/>
+          </Route>
   
           <Route path="/"> 
               <Home />
           </Route>
+
+          
   
         </Switch>
         <Footer/>
