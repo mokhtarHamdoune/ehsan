@@ -18,7 +18,7 @@ class  NavBar extends Component{
     }
     render(){
         return (
-            <nav>
+            <nav className='top-nav'>
                 <div className="menu-header">
                     <div className="logo">Ehsan</div>
                     <button className="toggle_btn" onClick={this.handleToggle}>

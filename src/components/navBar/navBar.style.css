@@ -1,31 +1,31 @@
-nav{
+.top-nav{
     display: flex;
     align-items: center;
     position: sticky;
     background-color: #fff;
     top:0;
     padding: 0px 10px;
-    z-index: 2;
+    z-index: 1010;
     border-bottom: 1px solid #eee;
 }
-nav .menu-header .logo{
+.top-nav .menu-header .logo{
     color:#058f58;
     cursor: pointer;
     font-family: 'El Messiri', sans-serif;
     font-size: 2em;
     margin-right: 30px ;
 }
-nav .menu-header .toggle_btn{
+.top-nav .menu-header .toggle_btn{
     display: none;
     background-color: transparent;
     border: none;
     outline: none;
 }
-nav .menu-header .toggle_btn:active{
+.top-nav .menu-header .toggle_btn:active{
     background-color: rgba(255,255,255,0.2);
     border-radius: 10%;
 }
-nav .nav-bar{
+.top-nav .nav-bar{
     list-style: none;
     padding: 0px ;
     margin: 0px;
@@ -66,18 +66,18 @@ nav .nav-bar{
     background-color: #03A693;
 }
 @media(max-width:768px){
-    nav{
+    .top-nav{
         flex-direction: column;
     }
-    nav .menu-header{
+    .top-nav .menu-header{
         display: flex;
         width: 100%;
         justify-content: space-between;
     }
-    nav .menu-header .toggle_btn{
+    .top-nav .menu-header .toggle_btn{
         display: block;
     }
-    nav .menu-header .logo{
+    .top-nav .menu-header .logo{
         font-size: 2rem;
     }
     .nav-bar{
