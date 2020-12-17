@@ -10,23 +10,30 @@
 }
 .sign-up-container .sign-up-left .form-container{
     width: 70%;
-    min-width:350px;
+    min-width:320px;
     margin:25px auto;
-    padding:50px 35px;
+    padding:20px ;
     background-color: #fff;
     border: 1px solid #aaa;
 }
 .sign-up-container .sign-up-left .form-container h1{
     text-align: center;
-    margin-top: 0px;
+    margin-top: 1rem;
     margin-bottom:5rem;
     font-family: 'Lato', sans-serif;
 }
-.sign-up-container .sign-up-left .form-container form{
+ .sign-up-container .sign-up-left .form-container form{
     display: flex;
     flex-direction: column;
     align-items: center;
     
+} 
+.sign-up-container .sign-up-left .form-container form .sign-up-row{
+    margin-bottom: 2rem;
+    width:90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .sign-up-container .sign-up-right{
     width: 50%;

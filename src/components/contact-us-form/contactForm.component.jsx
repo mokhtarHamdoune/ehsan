@@ -25,11 +25,21 @@ class ConcactForm extends React.Component{
                 <div className='contact-form-col'>
                     <h2>Contact Us</h2>
                     <form action="post">
-                        <FormInput label={'Name'} type='text' name='name' id='name' value={name} handleChange={this.handelChange}/>
-                        <FormInput label={'Surname'} type='text'  name='surname' id='surname' value={surname} handleChange={this.handelChange}/>
-                        <FormInput label={'Email'} type='text'  name='email' id='email' value={email} handleChange={this.handelChange}/>
-                        <FormInput label='Comment' type='textarea' name='comment' rows={6} id='comment'/>
-                        <Button color='secondary' type='submit'>Submit</Button>
+                        <div className='form-row'>
+                            <FormInput label={'Name'} type='text' name='name' id='name' value={name} handleChange={this.handelChange}/>
+                        </div>
+                        <div className='form-row'>
+                            <FormInput label={'Surname'} type='text'  name='surname' id='surname' value={surname} handleChange={this.handelChange}/>
+                        </div>
+                        <div className='form-row'>
+                            <FormInput label={'Email'} type='text'  name='email' id='email' value={email} handleChange={this.handelChange}/>
+                        </div>
+                        <div className='form-row'>
+                            <FormInput label='Comment' type='textarea' name='comment' rows={6} id='comment'/>
+                        </div>
+                        <div className='form-row'>
+                            <Button color='secondary' type='submit'>Submit</Button>
+                        </div>
                     </form>
                 </div>
                 <div className='contact-form-col'>

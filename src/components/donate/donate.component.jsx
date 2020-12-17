@@ -19,7 +19,7 @@ export default class Donate extends Component{
         this.handleInputChange=this.handleInputChange.bind(this);
     }
 
-    handleSelectChange(selectedOptions,selectId){
+    handleSelectChange(selectId,selectedOptions){
             selectedOptions === null ?
             selectId === 'status' ? this.setState({status:''}):this.setState({[selectId]:[]}):
             selectId === 'status' ? this.setState({status:selectedOptions.value}):

@@ -3,14 +3,15 @@ import {ProSidebar,Menu,MenuItem,SidebarHeader,SidebarContent,SidebarFooter} fro
 import {HomeOutlined,MessageOutlined,LogoutOutlined, StarOutlined,PlusCircleOutlined, UnorderedListOutlined} from '@ant-design/icons';
 import 'react-pro-sidebar/dist/css/styles.css';
 import './side-bar.style.css';
-import {Link} from 'react-router-dom';
+import {Link,useRouteMatch} from 'react-router-dom';
 
 function SideBar (props){
+    let {url} = useRouteMatch();
     const [isCollopased,setIsCollpased] =useState(false);
-
+    
     useEffect(()=>{
         function handleSideBarChange(e){
-            e.target.innerWidth <= 668 ? setIsCollpased(true) : setIsCollpased(false);
+            e.target.innerWidth <= 768 ? setIsCollpased(true) : setIsCollpased(false);
         }
 
         window.addEventListener('resize',handleSideBarChange)
@@ -26,23 +27,23 @@ function SideBar (props){
                     <Menu iconShape="circle" className='account-sidebar-menu'>
                         <MenuItem icon={<HomeOutlined style={{fontSize:20}} />}>
                             My Account
-                            <Link to='/user'/>
+                            <Link to={url}/>
                         </MenuItem>
                         <MenuItem icon={<PlusCircleOutlined style={{fontSize:20}} />}>
                             New Publication
-                            <Link to='/new-publication'/>
+                            <Link to={`${url}/new-pub`}/>
                         </MenuItem>
                         <MenuItem icon={<UnorderedListOutlined style={{fontSize:20}} />}>
                             My Publications
-                            <Link to='/my-publications'/>
+                            <Link to={`${url}/my-pubs`}/>
                         </MenuItem>
                         <MenuItem icon={<MessageOutlined style={{fontSize:20}} />}>
                             Motive Messages
-                            <Link to='/messages'/>
+                            <Link to={`${url}/messages`}/>
                         </MenuItem>
                         <MenuItem icon={<StarOutlined style={{fontSize:20}}/>} >
                             Favorite Messages
-                            <Link to='/fav-messages'/>
+                            <Link to={`${url}/fav-msgs`}/>
                         </MenuItem>
                         <MenuItem icon={<LogoutOutlined style={{fontSize:20}} />}>
                             Logout

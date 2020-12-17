@@ -45,8 +45,12 @@ class  App extends Component{
         <NavBar  handleLoginToggle={this.handleLoginToggle}/>
         <Modal title="Login" toggle={loginOn} handleLoginToggle={this.handleLoginToggle} modalWidth='25%' > 
           <form action="" className="login-form">
-              <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
-              <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
+              <div className='form-row'>
+                <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
+              </div>
+              <div className='form-row'>
+                <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
+              </div>
               <Button type="submit" className='btn' color="secondary" block><LoginOutlined /> Connextion</Button>
               <hr/>
               <Button type="button" className="btn" color="link" block><GoogleOutlined /> Connect With google</Button>
@@ -68,7 +72,7 @@ class  App extends Component{
           <Route path="/sign-up" component={SignUp} />
 
           
-          <Route path='/user'>
+          <Route path='/:user_id'>
               <UserAccount/>
           </Route>
   
