@@ -20,7 +20,7 @@ const  SearchBar = (props) =>{
                 isClearable 
                 placeholder="Select" 
                 isMulti 
-                handleSelectChange={this.props.handleSelectChange} /> 
+                handleSelectChange={props.handleSelectChange} /> 
             </div>
             <div className="sb-form-part">
                 <MySelect
@@ -31,7 +31,7 @@ const  SearchBar = (props) =>{
                 isClearable 
                 placeholder="Select" 
                 isMulti 
-                handleSelectChange={this.props.handleSelectChange}/>
+                handleSelectChange={props.handleSelectChange}/>
             </div>
             <div className="sb-form-part">
                 <MySelect 
@@ -42,14 +42,14 @@ const  SearchBar = (props) =>{
                 isSearchable={false} 
                 isClearable 
                 placeholder="Select"
-                handleSelectChange={this.props.handleSelectChange}/>
+                handleSelectChange={props.handleSelectChange}/>
             </div>
             <div className="sb-form-part">
                 <input
                     name="isAlmostGoing"
                     type="checkbox"
-                    checked={this.props.isAlmostGoing}
-                    onChange={this.props.handleInputChange} />
+                    checked={props.isAlmostGoing}
+                    onChange={props.handleInputChange} />
                 <label htmlFor="">Almost Goal</label>
             </div>
             <Button type="submit" color="secondary">Filter <FilterFilled/></Button>

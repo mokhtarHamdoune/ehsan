@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
-import Publication from '../publication/publication.component';
+// import Publication from '../publication/publication.component';
+import Publication from '../publication_v2/publication.component';
 import Search from '../search_bar/search_bar.component';
 import publications from './data';
 import './donate.style.css';
@@ -33,13 +34,17 @@ export default class Donate extends Component{
         let {isAlmostGoal} = this.state;
         return(
             <div className="donate-container">
-                <Search 
-                handleSelectChange={this.handleSelectChange} 
-                handleInputChange={this.handleInputChange}
-                isAlmostGoal={isAlmostGoal}/>
-                {
-                    publications.map(publication=><Publication key={publication.id} publication={publication}/>)
-                }
+                <div className='donante-search-bar'>
+                    <Search 
+                    handleSelectChange={this.handleSelectChange} 
+                    handleInputChange={this.handleInputChange}
+                    isAlmostGoal={isAlmostGoal}/>
+                </div>
+                <div className='donate-publications'>
+                    {
+                        publications.map(publication=><Publication key={publication.id} publication={publication}/>)
+                    }
+                </div>
             </div>
         );
     }

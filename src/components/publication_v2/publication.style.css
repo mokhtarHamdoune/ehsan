@@ -1,0 +1,209 @@
+.pub{
+    box-sizing:border-box;
+    margin:auto;
+    margin-bottom:20px;
+    background-color: #fff;
+    position: relative;
+    border-radius: 5px;
+    width:100%;
+    max-width:992px;
+    padding-top: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    box-shadow: 0px 2px 7px 1px #eee;
+    border: 1px solid #eee;
+}
+
+/* pub heaer*/
+.pub .pub-header{
+    width: 100%;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.pub .pub-header .publisher-info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+}
+
+.publisher-info .publisher-sm-pic{
+    width: 70px;
+    height: 70px;
+    border: 1px solid #eee;
+    border-radius: 50%;
+}
+.publisher-info .publisher-sm-pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.publisher-info ul{
+    list-style: none;
+    line-height:30px;
+    margin:8px;
+    padding: 0px;
+}
+.publisher-info ul .publisher_user_name{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}
+.publisher-info ul .pub_date{
+    font-size: 14px;
+    font-family:'Times New Roman', Times, serif;
+}
+.pub-header .donate-btn{
+        width:36%; 
+        max-width:210px;
+        margin-right:2%;
+}
+
+
+/*pub body */
+.pub-body{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding:5px;
+}
+
+.pub .pub-body .pub-left-side{
+    width: 45%;
+    min-width: 320px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.pub .pub-body .pub-right-side{
+    width:53%;   
+    display: flex;
+    flex-direction: column;
+}
+.pub  .pub-body .pub-right-side .progress-container{
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 18px;
+}
+.pub .pub-body .pub-right-side .progress-container .top-of-progress,
+.pub .pub-body .pub-right-side .progress-container .bottom-of-progress{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    margin:4px 0px;
+}
+.pub .pub-body .pub-right-side .about-pub-container{
+   display:flex;
+   justify-content:space-between;
+}
+.pub .pub-body .pub-right-side .about-pub-container .about-publisher,
+.pub .pub-body .pub-right-side .about-pub-container .about-publication{
+    border: 1px solid #eee;
+    min-width:47%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:5px;
+    background-color: #fff;
+}
+.about-pub-title{
+    padding: 0px;
+    margin: 13px;
+    font-family: 'Philosopher', sans-serif;
+    color: #03849C;
+}
+
+.abou-pub-list {
+    width: 100%;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 10px;
+    padding-left:15px;
+    line-height: 1.7em;
+    font-size: 1em;
+}
+.about-publisher .more-details-btn{
+    display: none;
+}
+.abou-pub-list .situation{
+    font-weight: 600;
+    font-family: sans-serif;
+}
+.danger-sit{
+    color: red;
+}
+.warning-sit{
+    color: orange;
+}
+.success-sit{
+    color: green;
+}
+.pub .pub-right-side .about-pub-container .block{
+    display: none;
+    border: 2px solid black;
+}
+@media(max-width:992px){
+
+    .pub-body .pub-right-side{
+        width: 55%;
+    }
+    .my-pub-body{
+    flex-direction: column;
+    align-items: center;
+    }
+    .pub .my-pub-body .pub-left-side,.pub .my-pub-body .pub-right-side{
+        width:85%;
+    }
+}
+
+
+@media(max-width:768px){
+ 
+    .pub .pub-body{
+        flex-direction: column;
+        align-items: center;
+    }
+    .pub .pub-body .pub-left-side,.pub .pub-body .pub-right-side{
+        width:80%;
+    }
+
+    .pub{
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    .pub-header .donate-btn{
+        width:40%; 
+    }  
+    .pub .pub-header .publisher-info{
+        width: 60%;
+    }
+}
+
+@media(max-width:576px){
+    
+    .pub .pub-body .pub-left-side,.pub .pub-body .pub-right-side{
+        width:100%;
+    }
+    .pub .pub-body .pub-right-side .about-pub-container .about-publication{
+        display: none;
+    }
+    .pub .pub-body .pub-right-side .about-pub-container .about-publisher{
+        width: 100%;
+    }
+    .about-publisher .abou-pub-list {
+        padding-left: 20px;
+    }
+    .about-publisher .more-details-btn{
+        display: block;
+    }
+
+} 

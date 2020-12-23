@@ -1,4 +1,10 @@
 .donate-container{
     background-color: #fafafa;
+    background-image: url('../../images/background-1.jpg');
+    background-attachment: fixed;
+    
+}
+.donate-publications{
+    padding-top: 35px;
     padding-bottom: 15px;
 }

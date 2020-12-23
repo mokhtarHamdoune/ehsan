@@ -1,6 +1,6 @@
 .carousel{
     position: relative;
-    border:2px solid #eee;
+    border:1px solid #eee;
 }
 
 /* carousel-slide container the images and the dot indicator*/
@@ -79,7 +79,8 @@
 
 @media(max-width:500px){
     .carousel{
-        min-width: 80%;
+        max-width:450px;
+        width: 100%;
     }
     .carousel .carousel-content .presentation{
         font-size: 1.2em;

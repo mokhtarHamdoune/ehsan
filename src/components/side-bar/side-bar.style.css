@@ -13,6 +13,7 @@
 
 .pro-sidebar > .pro-sidebar-inner {
     background-color: #333;
+    
 }
 .pro-sidebar .pro-menu {
     height: 100%;
@@ -20,4 +21,31 @@
 .pro-sidebar .pro-menu .pro-menu-item {
     font-size: 20px;
     font-family: 'Lato', sans-serif;
+}
+.sidebar-toggle-btn{
+    
+    border: 1px solid black;
+    position: fixed;
+    font-size:30px;
+    padding: 10px 12px;
+    border-radius: 50%;
+    bottom:40px;
+    left:8px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    z-index:3;
+    display: none;
+}
+
+@media(max-width:576px){
+    .sidebar-toggle-btn{
+        display: block;
+    }
+    .pro-sidebar.sm {
+        position: fixed;
+        top: 0px;
+        z-index: 1015;
+        height: 100%;
+    }
 }

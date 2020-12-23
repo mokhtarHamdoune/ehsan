@@ -1,17 +1,18 @@
 import React,{useEffect, useState} from 'react';
 import {ProSidebar,Menu,MenuItem,SidebarHeader,SidebarContent,SidebarFooter} from 'react-pro-sidebar';
-import {HomeOutlined,MessageOutlined,LogoutOutlined, StarOutlined,PlusCircleOutlined, UnorderedListOutlined} from '@ant-design/icons';
+import {HomeOutlined,MessageOutlined,LogoutOutlined, StarOutlined,PlusCircleOutlined, UnorderedListOutlined,MenuOutlined} from '@ant-design/icons';
 import 'react-pro-sidebar/dist/css/styles.css';
 import './side-bar.style.css';
 import {Link,useRouteMatch} from 'react-router-dom';
 
 function SideBar (props){
     let {url} = useRouteMatch();
+
     const [isCollopased,setIsCollpased] =useState(false);
-    
+    const [isSbToggled,setSbToggled]= useState(false);
     useEffect(()=>{
         function handleSideBarChange(e){
-            e.target.innerWidth <= 768 ? setIsCollpased(true) : setIsCollpased(false);
+            (e.target.innerWidth <= 768 && e.target.innerWidth >= 576) ? setIsCollpased(true) : setIsCollpased(false);
         }
 
         window.addEventListener('resize',handleSideBarChange)
@@ -19,7 +20,11 @@ function SideBar (props){
     })
 
     return(
-        <ProSidebar collapsed={isCollopased}>
+        <>
+        <div className='sidebar-toggle-btn' onClick={()=>setSbToggled(true)}>
+            <MenuOutlined/>
+        </div>
+        <ProSidebar collapsed={isCollopased} breakPoint='sm'  toggled={isSbToggled} onToggle={(value)=>setSbToggled(value)}>
                 <SidebarHeader>
                     <h2 className='side-bar-header'>Ehsan</h2>
                 </SidebarHeader>
@@ -29,7 +34,7 @@ function SideBar (props){
                             My Account
                             <Link to={url}/>
                         </MenuItem>
-                        <MenuItem icon={<PlusCircleOutlined style={{fontSize:20}} />}>
+                        <MenuItem icon={<PlusCircleOutlined style={{fontSize:20}}/>}>
                             New Publication
                             <Link to={`${url}/new-pub`}/>
                         </MenuItem>
@@ -55,6 +60,7 @@ function SideBar (props){
                     <h2 className='side-bar-header'>Ehsan</h2>
                 </SidebarFooter>
             </ProSidebar>
+        </>
     )
 }
 

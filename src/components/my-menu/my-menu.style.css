@@ -1,0 +1,64 @@
+.my-menu-container{
+    position: absolute;
+    min-width: 180px;
+    top:0;
+    right: 0;
+}
+.my-menu-container .my-menu{
+    border: 1px solid #aaa;
+    list-style: none;
+    padding:0px;
+    margin: 0px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    background-color:#fff;
+    margin: 2px;
+    box-shadow: 0px 1px 6px 1px #aaa;
+    position: relative;
+    top:20px;
+    right:10px;
+}
+.is-hidden{
+    display: none;
+}
+.my-menu-container .my-menu .my-menu-option{
+    cursor: pointer;
+    margin:5px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    display: flex;
+}
+.my-menu-container .my-menu .my-menu-option .option-icon{
+    display: block;
+    width: 30%; 
+}
+.my-menu-container .my-menu .my-menu-option .option-text{
+    display: block;
+    width: 70%;
+    text-align: left;
+}
+.my-menu-container .my-menu .my-menu-option:hover{
+    background-color: #eee;
+}
+
+.my-menu-container .my-menu-trigger{
+    font-size: 35px;
+    color: #888;
+    position: absolute;
+    top:-3px;
+    right: 5px;
+}
+.my-menu-container .my-menu-trigger:hover{
+    cursor: pointer;
+    color: #333;
+    align-self: flex-end;
+}
+.my-menu-container .my-menu-trigger:focus{
+    outline: none;
+    color: #333;
+}
+.my-menu-container .my-menu-trigger:active{
+    color: #333;
+}
