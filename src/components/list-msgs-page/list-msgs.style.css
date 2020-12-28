@@ -1,0 +1,25 @@
+.list-msgs-container{
+    width:100%;
+    background-image: url(../../images/butterfly-effect.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.list-msgs-container .msgs-table{
+    width: 85%;
+    margin:20px  auto;
+}
+
+.fav-msg:hover{
+    font-size: 19px;
+}
+.delete-icon{
+    padding: 10px;
+    transition: all 0.2s ease;
+}
+.delete-icon:hover{
+    cursor: pointer;
+    background-color: #ffffff25;
+    border-radius: 50%;
+}
