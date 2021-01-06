@@ -1,0 +1,15 @@
+.progress-container{
+    width: 100%;
+    border: 1px solid #eee;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 18px;
+}
+.progress-container .top-of-progress,
+.progress-container .bottom-of-progress{
+    display: flex;
+    justify-content: space-between;
+    font-family: sans-serif;
+    font-size: 0.9em;
+    margin:4px 0px;
+}

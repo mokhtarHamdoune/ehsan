@@ -1,0 +1,67 @@
+.my-car{
+    border:1px solid #aaa;
+    /* height: 255px; */
+    height: 300px;
+    padding: 18px;
+    border-radius: 5px;
+    position: relative;
+    overflow:hidden;
+}
+.my-car-ctrl{
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-car-ctrl .arrw-ctrl{
+    width: 55%;
+    min-width: 320px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+}
+.my-car-ctrl .arrw-ctrl .arrw{
+    border: 1px solid #fff;
+    font-size: 2.4rem;
+    padding: 5px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.479);
+    cursor: pointer;
+}
+.my-car-ctrl .arrw-ctrl .left-arrw{
+    animation: leftTranslate 0.5s  infinite;
+}
+.my-car-ctrl .arrw-ctrl .right-arrw{
+    animation: rightTranslate 0.5s  infinite;
+}
+
+
+@keyframes leftTranslate{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(-4px);
+       
+    }
+}
+@keyframes rightTranslate{
+    from{
+        transform: translateX(0px);
+    }
+    to{
+        transform: translateX(4px);
+       
+    }
+}
+@media(max-width:768px){
+    .my-car{
+        height: 255px;
+    }
+
+}

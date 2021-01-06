@@ -1,0 +1,176 @@
+.pub-details-container{
+    width: 75%;
+    padding:10px;
+    margin:25px auto;
+    border-radius: 10px;
+}
+.pub-details-container .share-date{
+    float:right;
+    margin-right:30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.pub-details-header{
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.pub-details-header .publish-info{
+    display: flex;
+    align-items: center;
+}
+/*publisher image*/
+.pub-details-header .publish-info .publish-img{
+    width: 160px;
+    height: 170px;
+    border: 2px solid #eee;
+}
+.pub-details-header .publish-info .publish-img img{
+    width: 100%;
+    height: 100%;
+}
+/*publihser info*/
+.pub-details-header .publish-info ul{
+    list-style: none;
+    margin:8px;
+    line-height: 50px;
+    padding: 0px;
+}
+.pub-details-header .publish-info ul .publish-full-name{
+    font-family: 'Lato', sans-serif;
+    font-size:1.6rem;
+}
+.pub-details-header .publish-info ul .publish-birth{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:1.2rem;
+}
+.pub-details-header .pub-header-options{
+    width: 25%;
+    padding: 5px;
+}
+/*about publisher*/
+.pub-part{
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    padding: 15px;
+    margin:25px 10px;
+}
+.pub-part .pub-part-title{
+    margin: 5px;
+    font-family: 'El Messiri', sans-serif;
+    text-decoration: underline;
+}
+.pub-part-row{
+    display:flex;
+    align-items: center;
+    width: 100%;
+    
+}
+.pub-part-row .pub-part-col{
+    flex: 1;
+    
+}
+.about-publisher-list{
+    list-style: none;
+    width: 100%;
+    line-height: 35px;
+    margin: 0px;
+}
+.about-publisher-list .about-publisher-item{
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+}
+.pub-option-row{
+    display: flex;
+}
+.progressbar-details{
+    list-style: none;
+    border: 1px solid #aaa;
+    line-height: 46px;
+    width: 90%;
+    margin:0px;
+    margin-left: auto;
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-pub-more{
+    border :1px solid #aaa;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.about-pub-text{
+    font-family: 'Lato', sans-serif;
+}
+.about-pub-desc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.social-media{
+    display: flex;
+    align-items: center;
+    padding:16px;
+}
+.social-media .social-media-icon{
+    margin-right: 10px;
+    font-size: 1.8rem;
+}
+.social-media .social-media-link{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: #03849C;
+}
+
+@media(max-width:992px){
+    .pub-details-container{
+        width: 90%;
+    }
+}
+@media(max-width:768px){
+    .pub-details-container{
+        width: 100%;
+    }
+    .pub-details-header .publish-info ul .publish-full-name{
+        font-size:1.2rem;
+    }
+    .pub-details-header .publish-info ul .publish-birth{
+        font-size:1rem;
+    }
+    .pub-part-row{
+        flex-direction: column;
+    }.pub-part-col{
+        width: 100%;
+    }
+    .progressbar-details{
+        width: 100%;
+    }
+}
+@media(max-width:576px){
+    
+    .pub-details-container{
+        width: 100%;
+        padding:0px;
+
+    }
+    /* may be will be in the bigger screen*/
+    .pub-details-header{
+        justify-content: center;
+    }
+
+    .pub-details-header .publish-info .publish-img{
+        width: 100px;
+        height: 110px;
+    }
+    .pub-details-header .pub-header-options{
+        width:75%;
+    }
+    .pub-part{
+        padding:5px;
+        margin: 25px 3px;
+    }
+    .about-pub-desc{
+        height: 200px;
+        overflow-y: scroll;
+    }
+}
