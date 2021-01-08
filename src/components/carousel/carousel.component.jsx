@@ -8,9 +8,10 @@ class  Carousel extends Component{
             imgIndex:0,
             numberOfImages:props.images.length,
         }
+        this.slide = this.slide.bind(this);
     }
     componentDidMount(){
-        if(this.state.numberOfImages!==0)setInterval(()=>this.slide(),3500);
+        if(this.state.numberOfImages!==0)setInterval(this.slide,3500);
     }
     componentWillUnmount(){
         clearInterval(this.slide);

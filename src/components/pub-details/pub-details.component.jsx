@@ -21,7 +21,6 @@ class PubDetails extends React.Component{
             links:{},
             pub_date:''
         };
-        console.log(props);
     }
     //fake request just for trying
     componentDidMount(){
@@ -31,6 +30,7 @@ class PubDetails extends React.Component{
 
     render(){
         const {isFaved,user_pic,images,publisher,progress,about,links,pub_date}=this.state;
+        const {myPub}= this.props;
         return(
             <div className="pub-details-container">
                 <span className='share-date'><CalendarOutlined />{pub_date}</span>
@@ -53,7 +53,7 @@ class PubDetails extends React.Component{
                 </div>
                 <div className='pub-part'>
                     <h2 className='pub-part-title'>About</h2>
-                    <div className="pub-part-row">
+                    <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                         <div className='pub-part-col'>
                             <ul className='about-publisher-list'>
                                 <li className='about-publisher-item'><b>Full name: </b>{publisher.user_name}</li>
@@ -70,7 +70,7 @@ class PubDetails extends React.Component{
                 </div>
                 <div className='pub-part'>
                     <h2 className='pub-part-title'>About Publication</h2>
-                    <div className='pub-part-row'>
+                    <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                         <div className='pub-part-col'>
                             <ProgressBar current={progress.current} goal={progress.goal} donnersNumber={progress.donners} />
                             <div className='pub-option-row'>
@@ -90,7 +90,7 @@ class PubDetails extends React.Component{
                         </div>
                     </div>
                     <div className="about-pub-more">
-                        <div className='pub-part-row'>
+                        <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                             <div className="pub-part-col">
                                 <p className='about-pub-text'><b>Title :</b> {about.title}</p>
                             </div>
@@ -98,12 +98,12 @@ class PubDetails extends React.Component{
                                 <p className='about-pub-text'><b>Type :</b> {about.type}</p>
                             </div>
                         </div>
-                        <div className='pub-part-row'>
+                        <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                             <div className="pub-part-col">
                                 <p className='about-pub-text'><b>Status :</b> <span style={{color:`${about.situation}`.toLowerCase(),fontWeight:'bold'}}>{about.situation}</span></p>
                             </div>
                         </div>
-                        <div className='pub-part-row'>
+                        <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                             <div className="pub-part-col">
                                 <h4 className='about-pub-text'>Description</h4>
                                 <p className='about-pub-desc'>
@@ -121,7 +121,7 @@ class PubDetails extends React.Component{
                 </div>
                 <div className='pub-part'>
                     <h2 className='pub-part-title'>Social Media Links</h2>
-                    <div className='pub-part-row'>
+                    <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                         <div className="pub-part-col social-media">
                             <FacebookOutlined className='social-media-icon' />
                             {
@@ -143,7 +143,7 @@ class PubDetails extends React.Component{
                             }
                         </div>
                     </div>
-                    <div className="pub-part-row">
+                    <div className={myPub ? 'my-pub-part-row' : 'pub-part-row'}>
                         <div className="pub-part-col social-media">
                             <TwitterOutlined className='social-media-icon'/>
                             {

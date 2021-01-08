@@ -9,7 +9,7 @@ import FadeSection from '../fadein-section/fade.component'
 // //css style
 import './publication.style.css';
 // //reoct router
-import { useRouteMatch,Link } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 
 const Publication = ({publication,menuOptions,myPubBody})=>{
     let {url} = useRouteMatch();
@@ -57,7 +57,7 @@ const Publication = ({publication,menuOptions,myPubBody})=>{
                                     <li><b>Address :</b><address>{publication.publisher.address}</address></li>
                                 </ul>
                                 <div className="more-details-btn">
-                                    <LinkButton href={`${url}/about/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
+                                    <LinkButton href={`${url}/details/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
                                 </div>
                             </div>
                             <div className="about-publication">
@@ -72,7 +72,7 @@ const Publication = ({publication,menuOptions,myPubBody})=>{
                                     <li><b>Pub Date :</b>{publication.about.pub_date}</li>
                                     <li><b>Pub Heure :</b>  {publication.about.pub_hour}</li>
                                 </ul>
-                                <LinkButton href={`${url}/about/${publication.id}`} bg_color="secondary" rounded>Details <InfoCircleOutlined/></LinkButton>
+                                <LinkButton href={`${url}/details/${publication.id}`} bg_color="secondary" rounded>Details <InfoCircleOutlined/></LinkButton>
                             </div>
                         </div>
                     </div>

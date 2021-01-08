@@ -2,7 +2,7 @@ import React from 'react';
 import './user-profile.style.css';
 import UserPic from '../../images/user-picture.png';
 import {EditFilled,UserOutlined,CalendarOutlined,PhoneOutlined,BuildOutlined,HomeOutlined,
-MailOutlined,LockOutlined,CheckOutlined,CloseOutlined} from '@ant-design/icons';
+MailOutlined,LockOutlined} from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import Modal from '../modal/modal.component';
 import FormInput from '../FormInput/form-input.component';
@@ -47,7 +47,7 @@ class UserProfile  extends React.Component{
         const {isModelAppear,fullname,birthdate,work,address,phone_n,email,password,password_confirm,file}=this.state;
         return (
             <div className="user-profile">
-                <Modal title={modelDetails[appropriateForm][1]} toggle={isModelAppear} handleLoginToggle={this.handleModalToggle} modalWidth={modelDetails[appropriateForm][0]}>
+                <Modal title={modelDetails[appropriateForm][1]} toggle={isModelAppear} handleToggle={this.handleModalToggle} modalWidth={modelDetails[appropriateForm][0]}>
                     <form className='user-profile-modal' method="post">
                         {appropriateForm === 1 ? 
                         <>
@@ -110,7 +110,7 @@ class UserProfile  extends React.Component{
                     <img src={file} alt='user face' />
                     <div className='change-pic'>
                         <span onClick={()=>this.ref.current.click()} className='change-pic-text'>Change Picture<EditFilled/></span>
-                        {/* <span ><CheckOutlined className='confirm-icon'/> <CloseOutlined className='confirm-icon'/></span> */}
+                        {/* <span >nfirm-icon'/> <CloseOutlined className='confirm-icon'/></span> */}
                         <input type="file" name='user_pic'ref={this.ref} onChange={this.handleChange}/>
                     </div>
                 </div>

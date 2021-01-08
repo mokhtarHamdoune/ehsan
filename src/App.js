@@ -8,6 +8,7 @@ import SignUp from './components/sign-up/sign-up.component';
 import AboutUs from './components/about-us/about-us.component';
 import ContactPage from './components/contact-page/contactPage.component';
 import UserAccount from './components/user-account/user_account.component';
+import PubDetails from './components/pub-details/pub-details.component';
 //login modal
 import Modal from './components/modal/modal.component';
 import FormInput from './components/FormInput/form-input.component';
@@ -26,14 +27,14 @@ class  App extends Component{
       loginOn:false
     }
     this.handleLoginChanges= this.handleLoginChanges.bind(this);
-    this.handleLoginToggle =  this.handleLoginToggle.bind(this);
+    this.handleToggle =  this.handleToggle.bind(this);
   }
 
   handleLoginChanges(e){
     this.setState({[e.target.name]:e.target.value});
   }
 
-  handleLoginToggle(loginState){
+  handleToggle(loginState){
     this.setState({loginOn:loginState});
   }
 
@@ -42,8 +43,8 @@ class  App extends Component{
     return (
       <div className="App">
         <Header/>
-        <NavBar  handleLoginToggle={this.handleLoginToggle}/>
-        <Modal title="Login" toggle={loginOn} handleLoginToggle={this.handleLoginToggle} modalWidth='25%' > 
+        <NavBar  handleToggle={this.handleToggle}/>
+        <Modal title="Login" toggle={loginOn} handleToggle={this.handleToggle} modalWidth='25%' > 
           <form action="" className="login-form">
               <div className='form-row'>
                 <FormInput label="User name*" id="user_name" type="text" value={user_name} name="user_name" handleChange={this.handleLoginChanges}/>  
@@ -51,17 +52,19 @@ class  App extends Component{
               <div className='form-row'>
                 <FormInput label="Password*" id="password" type="password" value={password} name="password" handleChange={this.handleLoginChanges} />
               </div>
-              <Button type="submit" className='btn' color="secondary" block><LoginOutlined /> Connextion</Button>
+              <Button type="submit" color="secondary" block><LoginOutlined /> Connextion</Button>
               <hr/>
-              <Button type="button" className="btn" color="link" block><GoogleOutlined /> Connect With google</Button>
-              <Button type="button" className="btn" color="black" block><FacebookFilled /> Connect With Facebook</Button>
+              <Button type="button" color="link" block><GoogleOutlined /> Connect With google</Button>
+              <Button type="button" color="black" block><FacebookFilled /> Connect With Facebook</Button>
           </form>
         </Modal>
         <Switch >
           
-          <Route path="/donate">
+          <Route path="/donate" exact>
             <Donate />
           </Route>
+
+          <Route path='/donate/details/:pub_id' component={PubDetails}/>
   
           <Route path="/contact-us" > 
             <ContactPage />
@@ -72,9 +75,7 @@ class  App extends Component{
           <Route path="/sign-up" component={SignUp} />
 
           
-          <Route path='/:user_id'>
-              <UserAccount/>
-          </Route>
+          <Route path='/:user_id' component={UserAccount}/>
   
           <Route path="/"> 
               <Home />

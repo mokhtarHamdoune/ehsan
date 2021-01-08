@@ -62,15 +62,14 @@
     font-family: 'El Messiri', sans-serif;
     text-decoration: underline;
 }
-.pub-part-row{
+.my-pub-part-row,.pub-part-row{
     display:flex;
     align-items: center;
     width: 100%;
     
 }
-.pub-part-row .pub-part-col{
+.my-pub-part-row .pub-part-col, .pub-part-row .pub-part-col{
     flex: 1;
-    
 }
 .about-publisher-list{
     list-style: none;
@@ -126,6 +125,15 @@
     .pub-details-container{
         width: 90%;
     }
+    .my-pub-part-row{
+        flex-direction: column;
+    }
+    .my-pub-part-row .pub-part-col{
+        width: 100%;
+    }
+    .my-pub-part-row .pub-part-col .progressbar-details{
+        width: 100%;
+    }
 }
 @media(max-width:768px){
     .pub-details-container{
@@ -137,9 +145,10 @@
     .pub-details-header .publish-info ul .publish-birth{
         font-size:1rem;
     }
-    .pub-part-row{
+    .my-pub-part-row,.pub-part-row{
         flex-direction: column;
-    }.pub-part-col{
+    }
+    .pub-part-col{
         width: 100%;
     }
     .progressbar-details{

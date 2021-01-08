@@ -5,6 +5,17 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
+.list-msgs-header {
+    background-color:rgba(255, 255, 255, 0.8);
+    color: #333;
+    text-align: center;
+    padding: 25px 0px;
+}
+.list-msgs-header h1{
+    margin: 0px;
+    font-family: 'Philosopher', sans-serif;
+}
+
 
 .list-msgs-container .msgs-table{
     width: 85%;

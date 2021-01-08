@@ -40,7 +40,7 @@ class  NavBar extends Component{
                     </li>
                     <li className="nav-item">
                         {/*i add prevent default # in url*/}
-                        <a href="#login" onClick={(e)=>{e.preventDefault();return this.props.handleLoginToggle(true)}}>Login <LoginOutlined/></a>
+                        <a href="#login" onClick={(e)=>{e.preventDefault();return this.props.handleToggle(true)}}>Login <LoginOutlined/></a>
                         <NavLink to="/sign-up" activeClassName="active">Sign Up</NavLink>
                     </li>
                 </ul>

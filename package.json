@@ -13,12 +13,15 @@
     "rc-progress": "^3.1.1",
     "react": "^17.0.1",
     "react-countup": "^4.3.3",
+    "react-data-table-component": "^6.11.6",
     "react-dom": "^17.0.1",
     "react-dropzone": "^11.2.4",
     "react-pro-sidebar": "^0.4.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-    "react-select": "^3.1.1"
+    "react-select": "^3.1.1",
+    "react-spring-3d-carousel": "^1.2.0",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",

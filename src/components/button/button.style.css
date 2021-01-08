@@ -43,3 +43,10 @@
 .btn-black:hover{
     background-color: #101010;
 }
+.btn-white{
+    background-color: #fff;
+    color: #aaa;
+}
+.btn-white:hover{
+    background-color: #fefefe;
+}

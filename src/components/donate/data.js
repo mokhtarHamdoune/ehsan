@@ -41,7 +41,7 @@ const publications=[
         },
         about:{
             type:'Surgery',
-            situation:'Medium',
+            situation:'Yellow',
             pub_date:'24-08-2020',
             pub_hour:'2:38'
         },

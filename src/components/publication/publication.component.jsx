@@ -10,7 +10,7 @@ import './publication.style.css';
 import { useRouteMatch } from 'react-router-dom';
 
 const Publication = ({publication})=>{
-    let {url} = useRouteMatch();
+    let {path} = useRouteMatch();
     return (
         <div className="pub">
             <div className="pub-left-side">
@@ -40,7 +40,7 @@ const Publication = ({publication})=>{
                             <li>Address:<address>{publication.publisher.address}</address></li>
                         </ul>
                         <div className="more-details-btn">
-                            <LinkButton href={`${url}/about/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
+                            <LinkButton href={`${path}/details/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
                         </div>
                     </div>
                     <div className="about-publication">
@@ -55,7 +55,7 @@ const Publication = ({publication})=>{
                             <li>Pub Date: {publication.about.pub_date}</li>
                             <li>Pub Heure: {publication.about.pub_hour}</li>
                         </ul>
-                        <LinkButton href={`${url}/about/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
+                        <LinkButton href={`${path}/details/${publication.id}`} bg_color="secondary">More Details <InfoCircleOutlined/></LinkButton>
                     </div>
                 </div>
             </div>

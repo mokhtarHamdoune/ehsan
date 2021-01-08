@@ -3,11 +3,11 @@ import {ProSidebar,Menu,MenuItem,SidebarHeader,SidebarContent,SidebarFooter} fro
 import {HomeOutlined,MessageOutlined,LogoutOutlined, StarOutlined,PlusCircleOutlined, UnorderedListOutlined,MenuOutlined} from '@ant-design/icons';
 import 'react-pro-sidebar/dist/css/styles.css';
 import './side-bar.style.css';
-import {Link,useRouteMatch} from 'react-router-dom';
+import {Link,useRouteMatch,useLocation} from 'react-router-dom';
 
 function SideBar (props){
     let {url} = useRouteMatch();
-
+    let {pathname} = useLocation();
     const [isCollopased,setIsCollpased] =useState(false);
     const [isSbToggled,setSbToggled]= useState(false);
     useEffect(()=>{
@@ -30,21 +30,25 @@ function SideBar (props){
                 </SidebarHeader>
                 <SidebarContent >
                     <Menu iconShape="circle" className='account-sidebar-menu'>
-                        <MenuItem icon={<HomeOutlined style={{fontSize:20}} />}>
+                        <MenuItem icon={<HomeOutlined style={{fontSize:20}} />}  active={url===pathname}>
                             My Account
                             <Link to={url}/>
                         </MenuItem>
-                        <MenuItem icon={<PlusCircleOutlined style={{fontSize:20}}/>}>
+                        <MenuItem icon={<PlusCircleOutlined style={{fontSize:20}}/> } active={`${url}/new-pub`===pathname}>
                             New Publication
                             <Link to={`${url}/new-pub`}/>
                         </MenuItem>
-                        <MenuItem icon={<UnorderedListOutlined style={{fontSize:20}} />}>
+                        <MenuItem icon={<UnorderedListOutlined style={{fontSize:20}} />} active={`${url}/my-pubs`===pathname}>
                             My Publications
                             <Link to={`${url}/my-pubs`}/>
                         </MenuItem>
-                        <MenuItem icon={<MessageOutlined style={{fontSize:20}} />}>
+                        <MenuItem icon={<MessageOutlined style={{fontSize:20}} />} active={`${url}/messages`===pathname}>
                             Motive Messages
                             <Link to={`${url}/messages`}/>
+                        </MenuItem>
+                        <MenuItem icon={<StarOutlined style={{fontSize:20}}/>} >
+                            Favorite Pubs
+                            <Link to={`${url}/fav-pubs`}/>
                         </MenuItem>
                         <MenuItem icon={<StarOutlined style={{fontSize:20}}/>} >
                             Favorite Messages
