@@ -1,5 +1,5 @@
 import React from 'react';
-import './user-profile.style.css';
+import './user-profile-2.style.css';
 import UserPic from '../../images/user-picture.png';
 import {EditFilled,UserOutlined,CalendarOutlined,PhoneOutlined,BuildOutlined,HomeOutlined,
 MailOutlined,LockOutlined} from '@ant-design/icons';
@@ -45,6 +45,7 @@ class UserProfile  extends React.Component{
     }
     render(){
         const {isModelAppear,fullname,birthdate,work,address,phone_n,email,password,password_confirm,file}=this.state;
+        const {url} = this.props.match;
         return (
             <div className="user-profile">
                 <Modal title={modelDetails[appropriateForm][1]} toggle={isModelAppear} handleToggle={this.handleModalToggle} modalWidth={modelDetails[appropriateForm][0]}>
@@ -73,88 +74,91 @@ class UserProfile  extends React.Component{
                             </div>
                         </div></>:
                         appropriateForm === 2 ? <>
-                        <div className='form-row'>
-                            <div className='form-col'>
+                            <div className='form-row'>
                                 <FormInput type='email' label={'Email'} value={email} name='email' id={'email'} handleChange={this.handleChange} />
                             </div>
-                        </div>
-                        <div className='form-row'>
-                            <div className='form-col'>
+                            <div className='form-row'>
                                 <FormInput type='password' label={'Password'} value={password} name='password' id={'password'} handleChange={this.handleChange} />
                             </div>
-                        </div>
-                        <div className='form-row'>
-                            <div className='form-col'>
+                            <div className='form-row'>
                                 <FormInput type='password' label={'Password Confirmation'} value={password_confirm} name='password_confirm' id={'password_confirm'} handleChange={this.handleChange} />
                             </div>
-                        </div>
-                        </>
-                        :<>
-                        <div className='form-row'>
-                            <div className='form-col'>
+                            </>
+                            :<>
+                            <div className='form-row'>
                                 <FormInput type='password' label={'New Password'} value={password} name='password' id={'password'} handleChange={this.handleChange} />
                             </div>
-                        </div>
-                        <div className='form-row'>
-                            <div className='form-col'>
+                            <div className='form-row'>
                                 <FormInput type='password' label={'Password Confirmation'} value={password_confirm} name='password_confirm' id={'password_confirm'} handleChange={this.handleChange} />
                             </div>
-                        </div></>}
+                        </>}
                         <Button type='submit' color='primary' block >Submit</Button>
                     </form>
                 </Modal>
-                <div className='user-pic'>
-                    {
-                    //when you add the server make sur to confirme before send it to the server
-                    }
-                    <img src={file} alt='user face' />
-                    <div className='change-pic'>
-                        <span onClick={()=>this.ref.current.click()} className='change-pic-text'>Change Picture<EditFilled/></span>
-                        {/* <span >nfirm-icon'/> <CloseOutlined className='confirm-icon'/></span> */}
-                        <input type="file" name='user_pic'ref={this.ref} onChange={this.handleChange}/>
+                <div className='user-profile-row'>
+                    <div className='user-profile-left-col'>
+                        <div className='user-pic'>
+                            {
+                            //when you add the server make sur to confirme before send it to the server
+                            }
+                            <img src={file} alt='user face' />
+                            <div className='change-pic'>
+                                <span onClick={()=>this.ref.current.click()} className='change-pic-text'>Change Picture<EditFilled/></span>
+                                {/* <span >nfirm-icon'/> <CloseOutlined className='confirm-icon'/></span> */}
+                                <input type="file" name='user_pic'ref={this.ref} onChange={this.handleChange}/>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='user-profile-right-col'>
+                        <div className='about-user'>
+                            <div className="about-header">
+                                <h3>About You</h3>
+                                <EditFilled className='edit-profile-icon' onClick={()=>this.handleModalToggle(true,1)} />
+                            </div>
+                            <div className='about-content'>
+                                <ul className='user-info-list'>
+                                    <li><span><UserOutlined/> Full Name : </span>{fullname}</li>
+                                    <li><span><CalendarOutlined/> Birthdate : </span>{birthdate}</li>
+                                    <li><span><BuildOutlined/> Work : </span>{work}</li>
+                                    <li><span><HomeOutlined/> Address : </span>{address}</li>
+                                    <li><span><PhoneOutlined/> Phone.N : </span>{phone_n}</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className='about-user'>
-                    <div className="about-header">
-                        <h3>About You</h3>
-                        <EditFilled className='edit-profile-icon' onClick={()=>this.handleModalToggle(true,1)} />
+                <div className="user-profile-row">
+                    <div className="user-profile-left-col">
+                        <div className='about-account'>
+                            <div className="about-header">
+                                <h3>About Your Account</h3>
+                                <EditFilled className ='edit-profile-icon' onClick={()=>this.handleModalToggle(true,2)} />
+                            </div>
+                            <div className='about-content'>
+                                <ul className='user-info-list'>
+                                    <li><span><MailOutlined/> Email : </span>{email}</li>
+                                    <li className='list-item-link'onClick={()=>this.handleModalToggle(true,3)} ><LockOutlined/>
+                                    Change you password</li>
+                                    <li><span><CalendarOutlined/> creation date : </span>10-12-2020</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div className='about-content'>
-                        <ul className='user-info-list'>
-                            <li><span><UserOutlined/> Full Name : </span>{fullname}</li>
-                            <li><span><CalendarOutlined/> Birthdate : </span>{birthdate}</li>
-                            <li><span><BuildOutlined/> Work : </span>{work}</li>
-                            <li><span><HomeOutlined/> Address : </span>{address}</li>
-                            <li><span><PhoneOutlined/> Phone.N : </span>{phone_n}</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='about-account'>
-                    <div className="about-header">
-                        <h3>About Your Account</h3>
-                        <EditFilled className ='edit-profile-icon' onClick={()=>this.handleModalToggle(true,2)} />
-                    </div>
-                    <div className='about-content'>
-                        <ul className='user-info-list'>
-                            <li><span><MailOutlined/> Email : </span>{email}</li>
-                            <li className='list-item-link'onClick={()=>this.handleModalToggle(true,3)} ><LockOutlined/>
-                            Change you password</li>
-                            <li><span><CalendarOutlined/> creation date : </span>10-12-2020</li>
-                        </ul>
-                    </div>
-                </div>
-                <div className='about-pub'>
-                    <div className="about-header">
-                        <h3>About publications</h3>
-                    </div>
-                    <div className='about-content'>
-                        <ul className='pub-others-list'>
-                            <li><span>N.Of Publications  : </span> 2</li>
-                            <li><span>Date Of  Last Publications  : </span> 10-12-2020</li>
-                            <li><span>Amount of last publication : </span>500M</li>
-                            <li><span>The rest of the last publications : </span>200M</li>
-                            <li><span>N.Of All donners : </span>2000</li>
-                        </ul>
+                    <div className="user-profile-right-col">
+                        <div className='about-pub'>
+                            <div className="about-header">
+                                <h3>About publications</h3>
+                            </div>
+                            <div className='about-content'>
+                                <ul className='pub-others-list'>
+                                    <li><span>N.Of Publications  : </span> 2</li>
+                                    <li><span>Date Of  Last Publications  : </span> 10-12-2020</li>
+                                    <li><span>Amount of last publication : </span>500M</li>
+                                    <li><span>The rest of the last publications : </span>200M</li>
+                                    <li><span>N.Of All donners : </span>2000</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className='about-others'>
@@ -164,7 +168,7 @@ class UserProfile  extends React.Component{
                     <div className='about-content'>
                         <ul className='pub-others-list'>
                             <li><span>N.Of Messages  : </span>8</li>
-                            <li ><Link to='/messages' className='list-item-link' >Open the messages</Link></li>
+                            <li ><Link to={`${url}/messages`} className='list-item-link' >Open the messages</Link></li>
                         </ul>
                     </div>
                 </div>

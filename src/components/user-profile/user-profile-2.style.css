@@ -1,0 +1,166 @@
+.user-profile-modal{
+    padding:15px;
+}
+
+.user-profile-modal .form-row{
+    display: flex;
+    width: 100%;
+    margin-bottom:32px;
+}
+.user-profile-modal .form-col{
+    width: 48%;
+}
+.user-profile{
+    width: 100%;
+    padding: 25px;
+}
+.user-profile-row{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.user-profile-left-col{
+    width: 35%;
+}
+.user-profile-right-col{
+    width: 60%;
+
+}
+.about-account,.about-others,.about-user,.about-pub{
+    border: 1px solid #eee;
+    width: 100%;
+    border-radius: 5px;
+}
+/*user picture */
+.user-pic{
+    width:200px;
+    height: 220px;
+    margin: 5% auto;
+    position: relative;
+}
+.user-pic img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid #f1f1f1;
+}
+.user-pic .change-pic{
+    visibility: hidden;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 22px ;
+    transition : background-color 0.2s ease-in-out;
+}
+.user-pic:hover .change-pic{
+    visibility: visible;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.user-pic .change-pic .change-pic-text:hover{
+    color: #037386;
+}
+.user-pic .change-pic .confirm-icon{
+    font-size: 30px;
+    margin:0px 15px;
+    padding: 3px;
+    transition: box-shadow 0.2s ease-out;
+}
+.user-pic .change-pic .confirm-icon:first-child{
+    color:#2a862a;
+}
+.user-pic .change-pic .confirm-icon:last-child{
+    color: #f03232;
+}
+.user-pic .change-pic .confirm-icon:hover{
+   box-shadow: 0px 0px 5px 1px #fff;
+}
+.user-pic .change-pic input[type='file']{
+    display: none;
+}
+/*the header */
+.about-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.2rem;
+    border-bottom: 1px solid #eee;
+    padding: 0px 15px;
+    background-color: #fff;
+    color: #03A693;
+    border-top-left-radius: 5px;
+    border-top-right-radius:5px;
+}
+.about-header h3{
+    margin:10px;
+    font-family: 'Righteous', cursive;
+} 
+.about-header .edit-profile-icon{
+    padding: 7px;
+}
+.about-header .edit-profile-icon:hover{
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #03a69370;
+}
+
+/*about-content*/
+.about-content{
+    padding:10px 14px;
+}
+
+.about-content .user-info-list{
+    list-style: none;
+    padding: 0px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.about-content .pub-others-list{
+    list-style-type:none;
+    margin: 5px;
+    line-height: 40px;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.about-content .user-info-list li span ,.about-content .pub-others-list li span{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.about-content  .list-item-link{
+    color:#03849C;
+    font-weight:normal;
+    cursor: pointer;
+}
+.about-content  .list-item-link:hover{
+    color:#037386;
+}
+@media(max-width:992px){
+    .user-profile-row{
+        flex-direction: column;
+    }
+    .user-profile-left-col,.user-profile-right-col{
+        width: 100%;
+    }
+    .user-profile-left-col{
+        margin-bottom: 20px;
+    }
+
+    .user-profile-modal .form-row{
+        flex-direction: column;
+    }
+    .user-profile-modal .form-col{
+        width: 100%;
+    }
+    .user-profile-modal .form-col:first-child{
+        margin-bottom: 23px;
+    }
+}

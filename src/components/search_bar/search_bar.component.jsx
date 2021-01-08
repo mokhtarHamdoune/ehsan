@@ -12,7 +12,7 @@ const  SearchBar = (props) =>{
     return (
     <div className="sb-container">
         <form action="" className="sb-form">
-            <div className="sb-form-part">
+            <div className="sb-form-select">
                 <MySelect 
                 name='type'
                 label='Donation for'
@@ -22,7 +22,7 @@ const  SearchBar = (props) =>{
                 isMulti 
                 handleSelectChange={props.handleSelectChange} /> 
             </div>
-            <div className="sb-form-part">
+            <div className="sb-form-select">
                 <MySelect
                 name='wilaya'
                 label='Specific Willaya'
@@ -33,7 +33,7 @@ const  SearchBar = (props) =>{
                 isMulti 
                 handleSelectChange={props.handleSelectChange}/>
             </div>
-            <div className="sb-form-part">
+            <div className="sb-form-select">
                 <MySelect 
                 name='status'
                 label='Status'
@@ -44,15 +44,17 @@ const  SearchBar = (props) =>{
                 placeholder="Select"
                 handleSelectChange={props.handleSelectChange}/>
             </div>
-            <div className="sb-form-part">
-                <input
-                    name="isAlmostGoing"
-                    type="checkbox"
-                    checked={props.isAlmostGoing}
-                    onChange={props.handleInputChange} />
-                <label htmlFor="">Almost Goal</label>
+            <div className="sb-form-input">
+                <div>
+                    <input
+                        name="isAlmostGoing"
+                        type="checkbox"
+                        checked={props.isAlmostGoing}
+                        onChange={props.handleInputChange} />
+                    <label htmlFor="">Almost Goal</label>
+                </div>
+                <Button type="submit" color="secondary">Filter <FilterFilled/></Button>
             </div>
-            <Button type="submit" color="secondary">Filter <FilterFilled/></Button>
         </form> 
     </div>
     );

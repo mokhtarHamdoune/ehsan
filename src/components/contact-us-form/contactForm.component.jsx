@@ -9,8 +9,7 @@ class ConcactForm extends React.Component{
         this.state={
             name:'',
             surname:'',
-            email:'',
-            comment:''
+            email:''
         }
         this.handelChange=this.handelChange.bind(this);
     }
@@ -19,7 +18,7 @@ class ConcactForm extends React.Component{
         this.setState({[name]:value});
     }
     render(){
-        const {name,surname,email,comment}=this.state;
+        const {name,surname,email}=this.state;
         return (
             <div className='contact-form-row' action="post">
                 <div className='contact-form-col'>
